@@ -34,6 +34,10 @@ window.addEventListener("pageshow", () => {
     closeMobileMenu();
 });
 
+window.addEventListener("focus", () => {
+    closeMobileMenu();
+});
+
 /* Accordion */
 
 const accordionHeaders = document.querySelectorAll(".accordion-header");
