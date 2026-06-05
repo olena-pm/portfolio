@@ -4,21 +4,28 @@ const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 const menuOverlay = document.getElementById("menuOverlay");
 
+function openMobileMenu() {
+    mobileMenu.classList.add("active");
+    menuOverlay.classList.add("active");
+    menuBtn.classList.add("open");
+}
+
 function closeMobileMenu() {
     mobileMenu.classList.remove("active");
     menuOverlay.classList.remove("active");
     menuBtn.classList.remove("open");
 }
 
-menuBtn.addEventListener("click", () => {
+menuBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
     const isOpen = mobileMenu.classList.contains("active");
 
     if (isOpen) {
         closeMobileMenu();
     } else {
-        mobileMenu.classList.add("active");
-        menuOverlay.classList.add("active");
-        menuBtn.classList.add("open");
+        openMobileMenu();
     }
 });
 
@@ -30,13 +37,7 @@ mobileLinks.forEach(link => {
     link.addEventListener("click", closeMobileMenu);
 });
 
-window.addEventListener("pageshow", () => {
-    closeMobileMenu();
-});
-
-window.addEventListener("focus", () => {
-    closeMobileMenu();
-});
+window.addEventListener("pageshow", closeMobileMenu);
 
 /* Accordion */
 
