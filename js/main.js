@@ -30,6 +30,10 @@ mobileLinks.forEach(link => {
     link.addEventListener("click", closeMobileMenu);
 });
 
+window.addEventListener("pageshow", () => {
+    closeMobileMenu();
+});
+
 /* Accordion */
 
 const accordionHeaders = document.querySelectorAll(".accordion-header");
