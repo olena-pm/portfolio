@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Experience icon</title>
+  <desc id="desc">Business case icon for work experience</desc>
+  <rect x="4" y="7.5" width="16" height="11" rx="2.2" stroke="#0A1730" stroke-width="1.8"/>
+  <path d="M9 7.5V6.2c0-.9.7-1.6 1.6-1.6h2.8c.9 0 1.6.7 1.6 1.6v1.3" stroke="#0A1730" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M4.5 11.7h15" stroke="#0A1730" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M12 10.9v2.1" stroke="#D9B833" stroke-width="2" stroke-linecap="round"/>
+</svg>

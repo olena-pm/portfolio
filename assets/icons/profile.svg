@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Profile icon</title>
+  <desc id="desc">Elegant profile icon for website menu</desc>
+  <circle cx="12" cy="7.5" r="3.4" stroke="#0A1730" stroke-width="1.8"/>
+  <path d="M5.2 19.2c.7-4 3.4-6.2 6.8-6.2s6.1 2.2 6.8 6.2" stroke="#0A1730" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M17.2 5.4c1.2.1 2.2.8 2.8 1.8" stroke="#D9B833" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

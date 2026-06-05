@@ -1,22 +1,33 @@
+/* Mobile Menu */
+
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
+const menuOverlay = document.getElementById("menuOverlay");
+
+function closeMobileMenu() {
+    mobileMenu.classList.remove("active");
+    menuOverlay.classList.remove("active");
+    menuBtn.classList.remove("open");
+}
 
 menuBtn.addEventListener("click", () => {
-    const isOpen = mobileMenu.style.display === "flex";
+    const isOpen = mobileMenu.classList.contains("active");
 
-    mobileMenu.style.display = isOpen ? "none" : "flex";
-    mobileMenu.style.flexDirection = "column";
-
-    menuBtn.classList.toggle("open", !isOpen);
+    if (isOpen) {
+        closeMobileMenu();
+    } else {
+        mobileMenu.classList.add("active");
+        menuOverlay.classList.add("active");
+        menuBtn.classList.add("open");
+    }
 });
+
+menuOverlay.addEventListener("click", closeMobileMenu);
 
 const mobileLinks = document.querySelectorAll(".mobile-menu a");
 
 mobileLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        mobileMenu.style.display = "none";
-        menuBtn.classList.remove("open");
-    });
+    link.addEventListener("click", closeMobileMenu);
 });
 
 /* Accordion */
