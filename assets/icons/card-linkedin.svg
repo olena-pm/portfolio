@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="title desc">
+  <title id="title">LinkedIn icon</title>
+  <desc id="desc">Line-styled LinkedIn mark without an enclosing square.</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14.5 22v15M14.5 13.5v.2M23.5 37V22M23.5 27.5c1.6-3.8 4.2-5.7 7.5-5.7 4.3 0 6.5 2.9 6.5 8.2v7" stroke="#0D1B33" stroke-width="3.2"/>
+    <path d="M34.5 11.4c3.2 1.9 5.3 4.8 6.2 8.6" stroke="#D4AF37" stroke-width="1.8"/>
+  </g>
+</svg>

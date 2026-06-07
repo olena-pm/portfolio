@@ -132,6 +132,7 @@ sections.forEach(section => {
 
 const contactForm = document.getElementById("contactForm");
 
+if(contactForm){
 contactForm.addEventListener("submit", event => {
     event.preventDefault();
 
@@ -154,6 +155,7 @@ contactForm.addEventListener("submit", event => {
 
     window.location.href = `mailto:olenalobachova.jp8@gmail.com?subject=${subject}&body=${body}`;
 });
+}
 
 /* Expertise expandable cards */
 
@@ -162,6 +164,10 @@ const expertiseCards = document.querySelectorAll(".expertise-card");
 expertiseCards.forEach(card => {
     const toggle = card.querySelector(".expertise-toggle");
     const body = card.querySelector(".expertise-body");
+
+    if(!toggle || !body){
+        return;
+    }
 
     toggle.addEventListener("click", () => {
         const isOpen = card.classList.contains("open");

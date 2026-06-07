@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="title desc">
+  <title id="title">Location icon</title>
+  <desc id="desc">Line icon of a location pin and compass circle.</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 42s13-11.2 13-23a13 13 0 0 0-26 0c0 11.8 13 23 13 23Z" stroke="#0D1B33" stroke-width="2.1"/>
+    <circle cx="24" cy="19" r="5" stroke="#0D1B33" stroke-width="2.1"/>
+    <path d="M24 2.5v4M24 32v4M41.5 19h-4M10.5 19h-4" stroke="#2F6FCE" stroke-width="1.5"/>
+    <path d="M31.5 9.5c2.2 1.8 3.5 4 4 6.6" stroke="#D4AF37" stroke-width="1.7"/>
+  </g>
+</svg>

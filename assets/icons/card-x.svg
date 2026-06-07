@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="title desc">
+  <title id="title">X social icon</title>
+  <desc id="desc">Recognizable X social mark without an enclosing square.</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12.5 12.5 35.5 36M35.5 12.5 12.5 36" stroke="#0D1B33" stroke-width="4.2"/>
+    <path d="M16.5 12.5 39.5 36M31.5 12.5 8.5 36" stroke="#0D1B33" stroke-width="1.7"/>
+    <path d="M10.5 39c3.9 1.6 8.2 1.5 12.6-.2" stroke="#D4AF37" stroke-width="1.7"/>
+  </g>
+</svg>
