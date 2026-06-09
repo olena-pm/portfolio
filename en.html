@@ -64,6 +64,11 @@
 
     <div class="header-right">
         <a href="index.html" id="langToggle" class="lang-btn">JP</a>
+        <div class="mobile-lang-switch" aria-label="Language switcher">
+            <span class="active">EN</span>
+            <span aria-hidden="true">|</span>
+            <a href="index.html">JA</a>
+        </div>
         <button id="menuBtn" class="menu-btn" aria-label="Open menu">
             <span></span>
             <span></span>
@@ -127,6 +132,31 @@
 
 </div>
 
+<section class="mobile-hero-image-section mobile-hero-image-section--en" aria-label="Olena Lobachova profile hero">
+    <div class="mobile-hero-image-wrap">
+        <picture>
+            <source media="(max-width: 320px)" srcset="assets/hero/hero_mobile_en_320.png">
+            <source media="(min-width: 321px) and (max-width: 374px)" srcset="assets/hero/hero_mobile_en_375.png">
+            <source media="(min-width: 375px) and (max-width: 430px)" srcset="assets/hero/hero_mobile_en_430.png">
+            <source media="(min-width: 431px) and (max-width: 599px)" srcset="assets/hero/hero_mobile_en_599.png">
+            <source media="(min-width: 600px) and (max-width: 768px)" srcset="assets/hero/hero_mobile_en_768.png">
+
+            <img
+                class="mobile-hero-image"
+                src="assets/hero/hero_mobile_en_430.png"
+                alt="Olena Lobachova — Senior Product Manager"
+                loading="eager"
+                decoding="async"
+            >
+        </picture>
+
+        <a class="hero-hotspot hero-hotspot-linkedin" href="https://www.linkedin.com/in/olena-lobachova-a3277714b" target="_blank" rel="noopener" aria-label="LinkedIn"></a>
+        <a class="hero-hotspot hero-hotspot-x" href="https://x.com/Olena153411" target="_blank" rel="noopener" aria-label="X Twitter"></a>
+        <a class="hero-hotspot hero-hotspot-contact" href="#contact" aria-label="Contact"></a>
+        <a class="hero-hotspot hero-hotspot-resume" href="https://drive.google.com/file/d/13aO4PKStOda4l4vGzSDAPVWAMG1S_WJc/view?usp=sharing" target="_blank" rel="noopener" aria-label="Download Resume"></a>
+    </div>
+</section>
+
 <section class="hero hero-approved">
     <div class="hero-content">
 
@@ -167,8 +197,14 @@
         </div>
 
         <div class="hero-visual">
-            <img class="hero-profile hero-profile-desktop" src="assets/profile.png" alt="Olena Lobachova">
-            <img class="hero-profile hero-profile-mobile" src="assets/decor/fuji-scene.png" alt="Fuji scene illustration">
+            <picture class="hero-visual-picture">
+                <source media="(max-width: 768px)" srcset="assets/hero/mobile_hero_vertical_asset_transparent.png">
+                <img
+                    src="assets/hero/hero_desktop_fixed_transparent.png"
+                    alt="Olena Lobachova connecting Ukrainian and Japanese aesthetics through product creation"
+                    class="hero-visual-img"
+                >
+            </picture>
         </div>
 
     </div>
@@ -369,9 +405,9 @@
                 <div class="tool-row">
                     <span class="tool-badge"><img src="assets/icons/tool-ga.svg" alt=""><span class="tool-label">GA</span></span>
                     <span class="tool-badge"><img src="assets/icons/tool-clarity.svg" alt=""><span class="tool-label">Clarity</span></span>
-                    <span class="tool-badge"><img src="assets/icons/tool-amplitude.svg" alt=""><span class="tool-label">Amplitude</span></span>
                     <span class="tool-badge"><img src="assets/icons/tool-powerbi.svg" alt=""><span class="tool-label">Power BI</span></span>
                     <span class="tool-badge"><img src="assets/icons/tool-tableau.svg" alt=""><span class="tool-label">Tableau</span></span>
+                    <span class="tool-badge"><img src="assets/icons/tool-search-console.svg" alt=""><span class="tool-label">Search Console</span></span>
                 </div>
                 <ul class="skill-list">
                     <li>User behavior analysis</li>
@@ -382,18 +418,19 @@
             </div>
 
             <div class="skill-group">
-                <h3>Development & Technical Literacy</h3>
+                <h3>Technical Literacy & Developer Collaboration</h3>
                 <div class="tool-row">
                     <span class="tool-badge"><img src="assets/icons/tool-html5.svg" alt=""><span class="tool-label">HTML5</span></span>
                     <span class="tool-badge"><img src="assets/icons/tool-js.svg" alt=""><span class="tool-label">JS</span></span>
                     <span class="tool-badge"><img src="assets/icons/tool-python.svg" alt=""><span class="tool-label">Python</span></span>
                     <span class="tool-badge"><img src="assets/icons/tool-api.svg" alt=""><span class="tool-label">API</span></span>
                     <span class="tool-badge"><img src="assets/icons/tool-github.svg" alt=""><span class="tool-label">GitHub</span></span>
+
                 </div>
                 <ul class="skill-list">
-                    <li>Web application development</li>
-                    <li>API integration</li>
-                    <li>Data handling basics</li>
+                    <li>Collaboration with development teams</li>
+                    <li>Basic understanding of API integration</li>
+                    <li>Data handling & utilization understanding</li>
                     <li>No-code development & prototyping</li>
                 </ul>
             </div>
@@ -403,19 +440,19 @@
                 <div class="tool-row">
                     <span class="tool-badge"><img src="assets/icons/tool-figma.svg" alt=""><span class="tool-label">Figma</span></span>
                     <span class="tool-badge"><img src="assets/icons/tool-miro.svg" alt=""><span class="tool-label">Miro</span></span>
-                    <span class="tool-badge"><img src="assets/icons/tool-backlog.svg" alt=""><span class="tool-label">Backlog</span></span>
+                    <span class="tool-badge"><img src="assets/icons/tool-jira.svg" alt=""><span class="tool-label">Jira</span></span>
                     <span class="tool-badge"><img src="assets/icons/tool-slack.svg" alt=""><span class="tool-label">Slack</span></span>
                 </div>
                 <ul class="skill-list">
                     <li>Requirement definition</li>
-                    <li>Wireframe creation</li>
-                    <li>Project management</li>
-                    <li>Team coordination & information direction</li>
+                    <li>Wireframing & prototyping</li>
+                    <li>Agile / Scrum facilitation</li>
+                    <li>Team coordination & information structuring</li>
                 </ul>
             </div>
 
             <div class="skill-group">
-                <h3>AI & Development Support</h3>
+                <h3>AI Productivity & Product Workflows</h3>
                 <div class="tool-row">
                     <span class="tool-badge"><img src="assets/icons/tool-chatgpt.svg" alt=""><span class="tool-label">ChatGPT</span></span>
                     <span class="tool-badge"><img src="assets/icons/tool-claude.svg" alt=""><span class="tool-label">Claude</span></span>
@@ -424,9 +461,9 @@
                 </div>
                 <ul class="skill-list">
                     <li>Workflow optimization</li>
-                    <li>Documentation support</li>
-                    <li>Idea structuring</li>
-                    <li>Requirement structuring & prototype support</li>
+                    <li>Requirement structuring & documentation support</li>
+                    <li>Idea organization & research support</li>
+                    <li>Prototype creation support</li>
                 </ul>
             </div>
 
@@ -440,7 +477,7 @@
                     <span>Localization Strategy</span>
                     <span>Market Adaptation</span>
                     <span>Agile Development</span>
-                    <span>Scrum</span>
+                    <span>Agile / Scrum</span>
                     <span>Stakeholder Management</span>
                 </div>
             </div>
@@ -453,32 +490,45 @@
 <section id="education" class="section showcase-section education-section">
     <div class="container">
         <h2>Education & Learning</h2>
-        <p class="section-subtitle">Continuous learning and skill development</p>
+        <p class="section-subtitle">Academic foundation and continuous professional development</p>
 
         <div class="education-grid">
 
-            <div class="education-card">
-                <span class="card-icon"><img src="assets/icons/card-book.svg" alt=""></span>
+            <div class="education-card education-card-academic education-card-degrees">
+                <span class="card-icon"><img src="assets/icons/card-graduation.svg" alt=""></span>
                 <div>
-                    <h3>SUNABACO Business School</h3>
-                    <ul>
-                        <li>Web application development</li>
-                        <li>Generative AI utilization</li>
-                        <li>Product development</li>
-                        <li>Digital marketing fundamentals</li>
+                    <h3>Master’s & Bachelor’s Degree</h3>
+                    <p class="education-university">Oles Honchar Dnipro National University</p>
+                    <ul class="education-degree-list">
+                        <li class="education-major-line">Japanese Language & Literature</li>
+                        <li class="education-faculty-line">Faculty of Foreign Languages</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="education-card">
-                <span class="card-icon"><img src="assets/icons/card-graduation.svg" alt=""></span>
+            <div class="education-card education-card-continuous">
+                <span class="card-icon"><img src="assets/icons/card-book.svg" alt=""></span>
                 <div>
-                    <h3>Master’s Degree</h3>
-                    <p>Japanese Philology</p>
-                    <ul>
-                        <li>Oles Honchar Dnipro National University</li>
-                        <li>Ukraine</li>
-                    </ul>
+                    <h3>Continuous Learning & Certifications</h3>
+                    <div class="education-learning-list">
+                        <div>
+                            <p>SUNABACO Programming School</p>
+                            <ul class="education-topic-list">
+                                <li>Web application development</li>
+                                <li>Practical team development</li>
+                                <li>Digital marketing fundamentals</li>
+                                <li>Generative AI applications</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p>Fundamentals of Project Planning and Management</p>
+                            <span>Coursera Certificate of Completion</span>
+                        </div>
+                        <div>
+                            <p>Kagawa University International Office</p>
+                            <span>Japanese Language Program</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -617,12 +667,13 @@
                 <source media="(max-width: 768px)" srcset="assets/brand/logo-mobile-dark.png">
                 <img src="assets/brand/logo-horizontal-dark.png" alt="Olena Lobachova logo">
             </picture>
+            <p>Bridging Japan and Global Markets Through Digital Products</p>
         </div>
 
         <div class="footer-links">
-            <a href="#">Privacy Policy</a>
-            <span>|</span>
-            <a href="#">Sitemap</a>
+            <a href="https://www.linkedin.com/in/olena-lobachova-a3277714b" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://drive.google.com/file/d/13aO4PKStOda4l4vGzSDAPVWAMG1S_WJc/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+            <a href="privacy-en.html">Privacy Policy</a>
         </div>
 
         <p class="footer-copy">

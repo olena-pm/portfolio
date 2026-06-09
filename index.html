@@ -74,6 +74,12 @@
             EN
         </a>
 
+        <div class="mobile-lang-switch" aria-label="Language switcher">
+            <a href="en.html">EN</a>
+            <span aria-hidden="true">|</span>
+            <span class="active">JA</span>
+        </div>
+
         <button id="menuBtn" class="menu-btn" aria-label="Open menu">
             <span></span>
             <span></span>
@@ -139,6 +145,31 @@
 
 </div>
 
+<section class="mobile-hero-image-section" aria-label="Olena Lobachova profile hero">
+    <div class="mobile-hero-image-wrap">
+        <picture>
+            <source media="(max-width: 320px)" srcset="assets/hero/hero_mobile_ja_320.png">
+            <source media="(min-width: 321px) and (max-width: 374px)" srcset="assets/hero/hero_mobile_ja_375.png">
+            <source media="(min-width: 375px) and (max-width: 430px)" srcset="assets/hero/hero_mobile_ja_430.png">
+            <source media="(min-width: 431px) and (max-width: 599px)" srcset="assets/hero/hero_mobile_ja_599.png">
+            <source media="(min-width: 600px) and (max-width: 768px)" srcset="assets/hero/hero_mobile_ja_768.png">
+
+            <img
+                class="mobile-hero-image"
+                src="assets/hero/hero_mobile_ja_430.png"
+                alt="Olena Lobachova - Senior Product Manager"
+                loading="eager"
+                decoding="async"
+            >
+        </picture>
+
+        <a class="hero-hotspot hero-hotspot-linkedin" href="https://www.linkedin.com/in/olena-lobachova-a3277714b" target="_blank" rel="noopener" aria-label="LinkedIn"></a>
+        <a class="hero-hotspot hero-hotspot-x" href="https://x.com/Olena153411" target="_blank" rel="noopener" aria-label="X Twitter"></a>
+        <a class="hero-hotspot hero-hotspot-contact" href="#contact" aria-label="お問い合わせ"></a>
+        <a class="hero-hotspot hero-hotspot-resume" href="https://drive.google.com/file/d/1lDjc1nf29w-zCJ1_ss4SDsrGoV_MkNAw/view?usp=sharing" target="_blank" rel="noopener" aria-label="履歴書ダウンロード"></a>
+    </div>
+</section>
+
 <section class="hero hero-approved">
     <div class="hero-content">
 
@@ -179,8 +210,14 @@
         </div>
 
         <div class="hero-visual">
-            <img class="hero-profile hero-profile-desktop" src="assets/profile.png" alt="Olena Lobachova">
-            <img class="hero-profile hero-profile-mobile" src="assets/decor/fuji-scene.png" alt="Fuji scene illustration">
+            <picture class="hero-visual-picture">
+                <source media="(max-width: 768px)" srcset="assets/hero/mobile_hero_vertical_asset_transparent.png">
+                <img
+                    src="assets/hero/hero_desktop_fixed_transparent.png"
+                    alt="Olena Lobachova connecting Ukrainian and Japanese aesthetics through product creation"
+                    class="hero-visual-img"
+                >
+            </picture>
         </div>
 
     </div>
@@ -381,9 +418,9 @@
                 <div class="tool-row">
                     <span class="tool-badge"><img src="assets/icons/tool-ga.svg" alt=""><span class="tool-label">GA</span></span>
                     <span class="tool-badge"><img src="assets/icons/tool-clarity.svg" alt=""><span class="tool-label">Clarity</span></span>
-                    <span class="tool-badge"><img src="assets/icons/tool-amplitude.svg" alt=""><span class="tool-label">Amplitude</span></span>
                     <span class="tool-badge"><img src="assets/icons/tool-powerbi.svg" alt=""><span class="tool-label">Power BI</span></span>
                     <span class="tool-badge"><img src="assets/icons/tool-tableau.svg" alt=""><span class="tool-label">Tableau</span></span>
+                    <span class="tool-badge"><img src="assets/icons/tool-search-console.svg" alt=""><span class="tool-label">Search Console</span></span>
                 </div>
                 <ul class="skill-list">
                     <li>ユーザー行動分析</li>
@@ -394,7 +431,7 @@
             </div>
 
             <div class="skill-group">
-                <h3>開発・技術理解</h3>
+                <h3>開発理解・技術コミュニケーション</h3>
                 <div class="tool-row">
                     <span class="tool-badge"><img src="assets/icons/tool-html5.svg" alt=""><span class="tool-label">HTML5</span></span>
                     <span class="tool-badge"><img src="assets/icons/tool-js.svg" alt=""><span class="tool-label">JS</span></span>
@@ -403,9 +440,9 @@
                     <span class="tool-badge"><img src="assets/icons/tool-github.svg" alt=""><span class="tool-label">GitHub</span></span>
                 </div>
                 <ul class="skill-list">
-                    <li>Webアプリ開発</li>
-                    <li>API連携</li>
-                    <li>データ取得処理</li>
+                    <li>開発チームとの連携</li>
+                    <li>API連携の基礎理解</li>
+                    <li>データ取得・活用理解</li>
                     <li>ノーコード開発・プロトタイピング</li>
                 </ul>
             </div>
@@ -415,19 +452,19 @@
                 <div class="tool-row">
                     <span class="tool-badge"><img src="assets/icons/tool-figma.svg" alt=""><span class="tool-label">Figma</span></span>
                     <span class="tool-badge"><img src="assets/icons/tool-miro.svg" alt=""><span class="tool-label">Miro</span></span>
-                    <span class="tool-badge"><img src="assets/icons/tool-backlog.svg" alt=""><span class="tool-label">Backlog</span></span>
+                    <span class="tool-badge"><img src="assets/icons/tool-jira.svg" alt=""><span class="tool-label">Jira</span></span>
                     <span class="tool-badge"><img src="assets/icons/tool-slack.svg" alt=""><span class="tool-label">Slack</span></span>
                 </div>
                 <ul class="skill-list">
                     <li>要件定義</li>
-                    <li>ワイヤーフレーム作成</li>
-                    <li>プロジェクト管理</li>
-                    <li>チーム連携・情報ディレクション</li>
+                    <li>ワイヤーフレーム・プロトタイプ作成</li>
+                    <li>アジャイル・スクラム推進</li>
+                    <li>チーム連携・情報整理</li>
                 </ul>
             </div>
 
             <div class="skill-group">
-                <h3>生成AI・開発支援</h3>
+                <h3>生成AI活用・業務効率化</h3>
                 <div class="tool-row">
                     <span class="tool-badge"><img src="assets/icons/tool-chatgpt.svg" alt=""><span class="tool-label">ChatGPT</span></span>
                     <span class="tool-badge"><img src="assets/icons/tool-claude.svg" alt=""><span class="tool-label">Claude</span></span>
@@ -436,9 +473,9 @@
                 </div>
                 <ul class="skill-list">
                     <li>業務効率化</li>
-                    <li>ドキュメント作成支援</li>
-                    <li>アイデア整理</li>
-                    <li>要件整理・プロトタイプ支援</li>
+                    <li>要件整理・文書作成支援</li>
+                    <li>アイデア整理・リサーチ支援</li>
+                    <li>プロトタイプ作成支援</li>
                 </ul>
             </div>
 
@@ -452,7 +489,7 @@
                     <span>ローカライズ戦略</span>
                     <span>市場適応</span>
                     <span>アジャイル開発</span>
-                    <span>スクラム</span>
+                    <span>アジャイル・スクラム</span>
                     <span>ステークホルダーマネジメント</span>
                 </div>
             </div>
@@ -465,32 +502,47 @@
 <section id="education" class="section showcase-section education-section">
     <div class="container">
         <h2>学歴・学習</h2>
-        <p class="section-subtitle">継続的な学びと自己成長</p>
+        <p class="section-subtitle">専門性を支える学びと継続的なスキル向上</p>
 
         <div class="education-grid">
 
-            <div class="education-card">
-                <span class="card-icon"><img src="assets/icons/card-book.svg" alt=""></span>
+            <div class="education-card education-card-academic education-card-degrees">
+                <span class="card-icon"><img src="assets/icons/card-graduation.svg" alt=""></span>
                 <div>
-                    <h3>SUNABACOビジネススクール</h3>
-                    <ul>
-                        <li>Webアプリ開発</li>
-                        <li>生成AI活用</li>
-                        <li>プロダクト開発</li>
-                        <li>デジタルマーケティング基礎</li>
+                    <h3>修士号・学士号 取得</h3>
+                    <p class="education-university">
+                        オレス・ホンチャル・ドニプロ国立大学<br>
+                        （ウクライナ）
+                    </p>
+                    <ul class="education-degree-list">
+                        <li class="education-major-line">外国語学部 日本語・日本文学</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="education-card">
-                <span class="card-icon"><img src="assets/icons/card-graduation.svg" alt=""></span>
+            <div class="education-card education-card-continuous">
+                <span class="card-icon"><img src="assets/icons/card-book.svg" alt=""></span>
                 <div>
-                    <h3>修士課程修了</h3>
-                    <p>日本語・日本文学専攻</p>
-                    <ul>
-                        <li>オレス・ホンチャール記念</li>
-                        <li>ドニプロ国立大学（ウクライナ）</li>
-                    </ul>
+                    <h3>継続学習・資格</h3>
+                    <div class="education-learning-list">
+                        <div>
+                            <p>SUNABACO プログラミングスクール</p>
+                            <ul class="education-topic-list">
+                                <li>Webアプリ開発</li>
+                                <li>実践的なチーム開発</li>
+                                <li>デジタルマーケティング基礎</li>
+                                <li>生成AI活用</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p>プロジェクトの計画と管理の基礎</p>
+                            <span>Coursera 修了認定書 取得</span>
+                        </div>
+                        <div>
+                            <p>香川大学インターナショナルオフィス 留学生センター</p>
+                            <span>日本語コース</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -629,12 +681,13 @@
                 <source media="(max-width: 768px)" srcset="assets/brand/logo-mobile-dark.png">
                 <img src="assets/brand/logo-horizontal-dark.png" alt="Olena Lobachova logo">
             </picture>
+            <p>デジタルプロダクトで日本とグローバル市場をつなぐ</p>
         </div>
 
         <div class="footer-links">
-            <a href="#">プライバシーポリシー</a>
-            <span>|</span>
-            <a href="#">サイトマップ</a>
+            <a href="https://www.linkedin.com/in/olena-lobachova-a3277714b" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://drive.google.com/file/d/1lDjc1nf29w-zCJ1_ss4SDsrGoV_MkNAw/view?usp=sharing" target="_blank" rel="noopener">履歴書ダウンロード</a>
+            <a href="privacy.html">プライバシーポリシー</a>
         </div>
 
         <p class="footer-copy">
