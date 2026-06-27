@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-labelledby="title desc">
-  <title id="title">Skills icon</title>
-  <desc id="desc">Refined tools icon for skills menu item</desc>
-  <path d="M14.5 5.2l4.3 4.3" stroke="#0A1730" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M18.3 5.7l-8.6 8.6-3.1.8.8-3.1L16 3.4c.6-.6 1.7-.6 2.3 0 .6.6.6 1.6 0 2.3z" stroke="#0A1730" stroke-width="1.8" stroke-linejoin="round"/>
-  <path d="M5.2 19h13.6" stroke="#D9B833" stroke-width="1.8" stroke-linecap="round"/>
-</svg>

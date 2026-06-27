@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="title desc">
-  <title id="title">Languages icon</title>
-  <desc id="desc">Line icon of overlapping speech bubbles.</desc>
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M8 12.5h24c3.3 0 6 2.7 6 6v8c0 3.3-2.7 6-6 6H20l-8 6v-6H8c-3.3 0-6-2.7-6-6v-8c0-3.3 2.7-6 6-6Z" stroke="#0D1B33" stroke-width="2.1"/>
-    <path d="M30 32.5h4.5l5.5 4.2v-4.2h.8c3.2 0 5.2-2.2 5.2-5.1v-7.2c0-2.5-1.6-4.5-4-5" stroke="#D4AF37" stroke-width="1.7"/>
-    <path d="M12 22.3h16M12 17.8h9M12 26.8h11" stroke="#2F6FCE" stroke-width="1.5"/>
-  </g>
-</svg>
