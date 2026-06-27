@@ -16,6 +16,9 @@
 ========================================================= */
 
 :root{
+    --font-display:"Playfair Display", Georgia, serif;
+    --font-body:"Noto Sans JP", Arial, sans-serif;
+
     --navy:#0D1B33;
     --navy-soft:#1C2D4A;
     --blue:#2F6FCE;
@@ -37,7 +40,6 @@
     --radius-lg:26px;
     --radius-md:18px;
 }
-
 
 /* =========================================================
    2. Base
@@ -7501,5 +7503,3203 @@ footer{
         max-width:768px !important;
         margin:0 auto !important;
         transform:none !important;
+    }
+}
+
+
+/* =========================================================
+   English business-first portfolio structure
+========================================================= */
+
+.en-business-page .hero-role{
+    max-width:480px;
+    font-size:clamp(13px, 1.22vw, 17px);
+    line-height:1.45;
+    margin-bottom:18px;
+}
+
+.en-business-page .hero-buttons{
+    max-width:440px;
+    margin-bottom:36px;
+}
+
+.en-business-page #value,
+.en-business-page #cases,
+.en-business-page #expertise,
+.en-business-page #beyond,
+.en-business-page #contact{
+    scroll-margin-top:92px;
+}
+
+.en-business-page .value-section{
+    padding:58px 0 62px;
+    background:rgba(255,253,249,.95);
+    border-top:1px solid rgba(232,223,209,.72);
+    border-bottom:1px solid rgba(232,223,209,.72);
+}
+
+.en-business-page .value-section .container,
+.en-business-page .cases-section .container{
+    width:min(1040px,88%);
+}
+
+.en-business-page .value-section h2,
+.en-business-page .cases-section h2{
+    margin-bottom:28px;
+    font-size:clamp(30px, 3vw, 38px);
+}
+
+.en-business-page .value-section .section-subtitle,
+.en-business-page .cases-section .section-subtitle{
+    margin-top:-18px;
+    margin-bottom:32px;
+    font-size:13px;
+}
+
+.en-business-page .value-grid{
+    display:grid;
+    grid-template-columns:minmax(0, 3fr) minmax(300px, 2fr);
+    gap:24px;
+    align-items:stretch;
+}
+
+.en-business-page .value-main,
+.en-business-page .value-credibility{
+    padding:28px 30px;
+    border:1px solid rgba(219,207,190,.88);
+    border-radius:8px;
+    background:rgba(255,255,255,.82);
+    box-shadow:0 12px 30px rgba(13,27,51,.055);
+}
+
+.en-business-page .value-main{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.en-business-page .value-main p{
+    color:#263954;
+    font-size:15px;
+    line-height:1.9;
+    font-weight:500;
+}
+
+.en-business-page .value-main p + p{
+    margin-top:16px;
+}
+
+.en-business-page .value-credibility{
+    background:rgba(255,250,243,.78);
+}
+
+.en-business-page .credibility-points{
+    display:grid;
+    gap:14px;
+    list-style:none;
+}
+
+.en-business-page .credibility-points li{
+    display:grid;
+    gap:2px;
+}
+
+.en-business-page .credibility-points strong{
+    color:var(--navy);
+    font-size:15px;
+    line-height:1.3;
+    font-weight:900;
+}
+
+.en-business-page .credibility-points span,
+.en-business-page .value-detail p{
+    color:#5f6f86;
+    font-size:12px;
+    line-height:1.55;
+    font-weight:550;
+}
+
+.en-business-page .value-divider{
+    height:1px;
+    margin:18px 0 16px;
+    background:linear-gradient(90deg,rgba(212,175,55,.72),rgba(219,207,190,.35));
+}
+
+.en-business-page .value-detail + .value-detail{
+    margin-top:12px;
+}
+
+.en-business-page .value-detail > span{
+    display:block;
+    margin-bottom:3px;
+    color:var(--navy);
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+}
+
+.en-business-page .cases-section{
+    padding:62px 0;
+    background:
+        radial-gradient(circle at 3% 24%, rgba(47,111,206,.045), transparent 22%),
+        radial-gradient(circle at 97% 78%, rgba(245,205,210,.13), transparent 24%),
+        rgba(255,253,249,.72);
+}
+
+.en-business-page .case-grid{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0,1fr));
+    gap:18px;
+}
+
+.en-business-page .case-card{
+    min-height:256px;
+    padding:24px 26px 23px;
+    border:1px solid rgba(232,223,209,.95);
+    border-radius:8px;
+    background:rgba(255,255,255,.86);
+    box-shadow:0 12px 28px rgba(13,27,51,.055);
+    transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.en-business-page .case-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 18px 42px rgba(13,27,51,.09);
+}
+
+.en-business-page .case-card--wide{
+    grid-column:1 / -1;
+    min-height:0;
+}
+
+.en-business-page .case-card-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:14px;
+}
+
+.en-business-page .case-number{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:31px;
+    height:31px;
+    border-radius:50%;
+    color:var(--gold);
+    background:rgba(255,250,243,.92);
+    border:1px solid rgba(212,175,55,.35);
+    font-size:11px;
+    font-weight:900;
+}
+
+.en-business-page .case-icon{
+    width:48px;
+    height:48px;
+    object-fit:contain;
+}
+
+.en-business-page .case-card h3{
+    margin-bottom:9px;
+    color:var(--navy);
+    font-size:17px;
+    line-height:1.38;
+    font-weight:900;
+}
+
+.en-business-page .case-card p{
+    color:#40516a;
+    font-size:13px;
+    line-height:1.72;
+    font-weight:500;
+}
+
+.en-business-page #expertise.section{
+    padding:62px 0;
+}
+
+.en-business-page #expertise .container{
+    width:min(1100px,90%);
+}
+
+.en-business-page #expertise h2{
+    max-width:650px;
+    margin-inline:auto;
+    margin-bottom:28px;
+    font-size:clamp(28px, 2.8vw, 36px);
+}
+
+.en-business-page #expertise .section-subtitle{
+    max-width:620px;
+    margin-top:-18px;
+    margin-bottom:32px;
+}
+
+.en-business-page .expertise-grid,
+.en-business-page .expertise-grid-compact{
+    grid-template-columns:repeat(5, minmax(0,1fr));
+}
+
+.en-business-page .expertise-card,
+.en-business-page .expertise-compact{
+    min-height:254px;
+    padding:20px 16px;
+}
+
+.en-business-page .expertise-compact h3,
+.en-business-page .expertise-card h3{
+    min-height:56px;
+    margin-bottom:10px;
+    font-size:13px;
+    line-height:1.38;
+}
+
+.en-business-page .expertise-card p{
+    color:#40516a;
+    font-size:11.1px;
+    line-height:1.65;
+    font-weight:560;
+    text-align:center;
+}
+
+.en-business-page .beyond-section{
+    padding-top:26px;
+    padding-bottom:24px;
+}
+
+.en-business-page .beyond-card{
+    max-width:760px;
+    font-size:13px;
+    line-height:1.85;
+}
+
+.en-business-page #contact .contact-info{
+    grid-template-columns:repeat(3, minmax(0,1fr));
+    width:min(900px,86%);
+}
+
+@media (min-width:769px) and (max-width:1180px){
+
+    .en-business-page .expertise-grid,
+    .en-business-page .expertise-grid-compact{
+        grid-template-columns:repeat(3, minmax(0,1fr));
+    }
+
+    .en-business-page .expertise-card:nth-child(5){
+        grid-column:2;
+    }
+}
+
+@media (max-width:768px){
+
+    .en-business-page .hero-approved{
+        display:none;
+    }
+
+    .en-business-page .mobile-hero-image-section--en .hero-hotspot-linkedin{
+        left:6.7%;
+        top:47.1%;
+        width:38.5%;
+        height:6.2%;
+    }
+
+    .en-business-page .mobile-hero-image-section--en .hero-hotspot-contact{
+        left:6.7%;
+        top:55%;
+        width:38.5%;
+        height:6.4%;
+    }
+
+    .en-business-page .mobile-hero-image-section--en .hero-hotspot-resume{
+        left:6.7%;
+        top:63.3%;
+        width:38.5%;
+        height:6.5%;
+    }
+
+    .en-business-page .value-section,
+    .en-business-page .cases-section,
+    .en-business-page #expertise.section{
+        padding:34px 0;
+    }
+
+    .en-business-page .value-section .container,
+    .en-business-page .cases-section .container,
+    .en-business-page #expertise .container{
+        width:min(100% - 44px, 680px);
+    }
+
+    .en-business-page .value-section h2,
+    .en-business-page .cases-section h2,
+    .en-business-page #expertise h2{
+        margin-bottom:12px;
+        font-size:26px;
+        line-height:1.22;
+    }
+
+    .en-business-page .value-section .section-subtitle,
+    .en-business-page .cases-section .section-subtitle,
+    .en-business-page #expertise .section-subtitle{
+        max-width:330px;
+        margin:0 auto 18px;
+        font-size:11px;
+        line-height:1.55;
+    }
+
+    .en-business-page .value-grid,
+    .en-business-page .case-grid,
+    .en-business-page .expertise-grid,
+    .en-business-page .expertise-grid-compact{
+        grid-template-columns:1fr;
+        gap:12px;
+    }
+
+    .en-business-page .value-main,
+    .en-business-page .value-credibility{
+        padding:20px;
+        border-radius:12px;
+    }
+
+    .en-business-page .value-main p{
+        font-size:12px;
+        line-height:1.8;
+    }
+
+    .en-business-page .value-main p + p{
+        margin-top:12px;
+    }
+
+    .en-business-page .credibility-points{
+        gap:11px;
+    }
+
+    .en-business-page .credibility-points strong{
+        font-size:13px;
+    }
+
+    .en-business-page .credibility-points span,
+    .en-business-page .value-detail p{
+        font-size:10.5px;
+    }
+
+    .en-business-page .value-divider{
+        margin:14px 0;
+    }
+
+    .en-business-page .case-card,
+    .en-business-page .case-card--wide{
+        grid-column:auto;
+        min-height:0;
+        padding:18px;
+        border-radius:12px;
+    }
+
+    .en-business-page .case-card h3{
+        margin-bottom:7px;
+        font-size:15px;
+        line-height:1.36;
+    }
+
+    .en-business-page .case-card p{
+        font-size:11px;
+        line-height:1.65;
+    }
+
+    .en-business-page .case-icon{
+        width:42px;
+        height:42px;
+    }
+
+    .en-business-page .expertise-card,
+    .en-business-page .expertise-compact{
+        min-height:0;
+        padding:17px 18px;
+        border-radius:12px;
+        text-align:left;
+    }
+
+    .en-business-page .expertise-visual{
+        width:42px;
+        height:42px;
+        margin:0 0 8px;
+    }
+
+    .en-business-page .expertise-icon-img,
+    .en-business-page .expertise-compact:nth-child(n) .expertise-icon-img{
+        width:40px;
+        height:40px;
+    }
+
+    .en-business-page .expertise-compact h3,
+    .en-business-page .expertise-card h3,
+    html[lang="en"] .en-business-page .expertise-compact h3,
+    html[lang="en"] .en-business-page .expertise-card h3{
+        min-height:0;
+        margin-bottom:6px;
+        justify-content:flex-start;
+        font-size:14px;
+        line-height:1.35;
+        text-align:left;
+    }
+
+    .en-business-page .expertise-card p{
+        font-size:11px;
+        line-height:1.6;
+        text-align:left;
+    }
+
+    .en-business-page .beyond-section{
+        padding-top:22px;
+        padding-bottom:20px;
+    }
+
+    .en-business-page .beyond-card{
+        width:min(100% - 44px, 620px);
+        max-width:min(100% - 44px, 620px);
+        font-size:11px;
+        line-height:1.82;
+    }
+
+    .en-business-page #contact .contact-info{
+        width:min(100% - 44px, 560px);
+        grid-template-columns:1fr;
+        gap:9px;
+    }
+
+    .en-business-page #contact .contact-card{
+        min-height:66px;
+        flex-direction:row;
+        justify-content:flex-start;
+        padding:12px 14px;
+        text-align:left;
+    }
+
+    .en-business-page #contact .contact-card p{
+        display:block;
+        font-size:9px;
+    }
+}
+
+@media (max-width:374px){
+
+    .en-business-page .value-main,
+    .en-business-page .value-credibility,
+    .en-business-page .case-card{
+        padding:16px;
+    }
+
+    .en-business-page .value-main p,
+    .en-business-page .case-card p,
+    .en-business-page .expertise-card p{
+        font-size:10.5px;
+    }
+}
+
+
+/* =========================================================
+   English digital business card final polish
+========================================================= */
+
+.en-business-page .desktop-nav{
+    gap:clamp(18px, 1.7vw, 26px);
+}
+
+.en-business-page .desktop-nav a{
+    font-size:14px;
+}
+
+.en-business-page .desktop-nav a.active{
+    color:var(--navy-soft);
+}
+
+.en-business-page .header .lang-btn{
+    min-width:38px;
+    height:32px;
+    padding:0 9px;
+    border:1px solid rgba(212,175,55,.52);
+    border-radius:7px;
+    background:rgba(255,250,243,.88);
+    box-shadow:0 5px 14px rgba(13,27,51,.05);
+    color:var(--navy);
+    font-size:12px;
+    letter-spacing:.04em;
+}
+
+.en-business-page .value-section{
+    padding:52px 0 54px;
+}
+
+.en-business-page .value-grid{
+    gap:22px;
+}
+
+.en-business-page .value-main,
+.en-business-page .value-credibility{
+    padding:30px 32px;
+    border-color:rgba(219,207,190,.78);
+    box-shadow:0 13px 30px rgba(13,27,51,.045);
+}
+
+.en-business-page .value-main p{
+    font-size:15.2px;
+    line-height:1.92;
+    font-weight:520;
+}
+
+.en-business-page .value-main p + p{
+    margin-top:13px;
+}
+
+.en-business-page .credibility-points li{
+    position:relative;
+    padding-left:13px;
+}
+
+.en-business-page .credibility-points li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:.7em;
+    width:4px;
+    height:4px;
+    border-radius:50%;
+    background:var(--gold);
+}
+
+.en-business-page .credibility-points strong{
+    font-size:14.6px;
+}
+
+.en-business-page .cases-section,
+.en-business-page #expertise.section{
+    padding:52px 0;
+}
+
+.en-business-page .case-grid{
+    gap:16px;
+    grid-auto-rows:1fr;
+}
+
+.en-business-page .case-card{
+    min-height:236px;
+    padding:22px 24px 21px;
+    border-color:rgba(219,207,190,.82);
+    box-shadow:0 10px 24px rgba(13,27,51,.045);
+}
+
+.en-business-page .case-card--wide{
+    width:calc((100% - 16px) / 2);
+    min-height:236px;
+    justify-self:center;
+}
+
+.en-business-page .case-card-top{
+    margin-bottom:11px;
+}
+
+.en-business-page .case-icon{
+    width:54px;
+    height:54px;
+}
+
+.en-business-page .case-card h3{
+    margin-bottom:8px;
+    font-size:16px;
+}
+
+.en-business-page .case-card p{
+    font-size:12.5px;
+    line-height:1.68;
+}
+
+.en-business-page .expertise-card,
+.en-business-page .expertise-compact{
+    min-height:218px;
+    padding:16px 14px;
+    box-shadow:0 9px 22px rgba(13,27,51,.04);
+}
+
+.en-business-page .expertise-visual{
+    width:56px;
+    height:56px;
+    margin-bottom:9px;
+}
+
+.en-business-page .expertise-icon-img,
+.en-business-page .expertise-compact:nth-child(n) .expertise-icon-img{
+    width:54px;
+    height:54px;
+}
+
+.en-business-page .expertise-compact h3,
+.en-business-page .expertise-card h3{
+    min-height:49px;
+    margin-bottom:7px;
+    font-size:12.6px;
+    line-height:1.34;
+}
+
+.en-business-page .expertise-card p{
+    font-size:10.7px;
+    line-height:1.56;
+    font-weight:540;
+}
+
+.en-business-page .beyond-section{
+    padding-top:22px;
+    padding-bottom:18px;
+}
+
+.en-business-page .beyond-card{
+    max-width:720px;
+    font-size:12.8px;
+    line-height:1.82;
+}
+
+.en-business-page .beyond-ribbon-left,
+.en-business-page .beyond-ribbon-right{
+    opacity:.46;
+}
+
+.en-business-page .contact-section{
+    padding-top:48px;
+    padding-bottom:50px;
+}
+
+.en-business-page .contact-lead{
+    max-width:500px;
+    color:#4f5f78;
+    font-size:13px;
+    line-height:1.6;
+}
+
+.en-business-page #contact .contact-info{
+    gap:14px;
+}
+
+.en-business-page #contact .contact-card{
+    min-height:76px;
+    border-color:rgba(219,207,190,.84);
+}
+
+.en-business-page #contact .contact-card--primary{
+    background:rgba(255,255,255,.92);
+    border-color:rgba(212,175,55,.34);
+    box-shadow:0 12px 26px rgba(13,27,51,.06);
+}
+
+.en-business-page #contact .contact-card--supporting{
+    background:rgba(255,253,249,.68);
+}
+
+.en-business-page #contact .contact-card--primary strong{
+    font-size:12px;
+}
+
+@media (max-width:768px){
+
+    .en-business-page .mobile-lang-switch{
+        padding:0 2px;
+    }
+
+    .en-business-page .value-section,
+    .en-business-page .cases-section,
+    .en-business-page #expertise.section{
+        padding:30px 0;
+    }
+
+    .en-business-page .value-main,
+    .en-business-page .value-credibility{
+        padding:20px 21px;
+    }
+
+    .en-business-page .value-main p{
+        font-size:12.2px;
+        line-height:1.82;
+    }
+
+    .en-business-page .value-main p + p{
+        margin-top:10px;
+    }
+
+    .en-business-page .case-grid{
+        gap:10px;
+    }
+
+    .en-business-page .case-card,
+    .en-business-page .case-card--wide{
+        width:auto;
+        min-height:0;
+        padding:16px 17px;
+    }
+
+    .en-business-page .case-card h3{
+        font-size:14.6px;
+    }
+
+    .en-business-page .case-card p{
+        font-size:10.9px;
+        line-height:1.62;
+    }
+
+    .en-business-page .case-icon{
+        width:47px;
+        height:47px;
+    }
+
+    .en-business-page .expertise-grid,
+    .en-business-page .expertise-grid-compact{
+        gap:10px;
+    }
+
+    .en-business-page .expertise-card,
+    .en-business-page .expertise-compact{
+        display:grid;
+        grid-template-columns:48px minmax(0, 1fr);
+        column-gap:12px;
+        padding:15px 16px;
+    }
+
+    .en-business-page .expertise-visual{
+        grid-row:1 / span 2;
+        width:48px;
+        height:48px;
+        margin:0;
+    }
+
+    .en-business-page .expertise-icon-img,
+    .en-business-page .expertise-compact:nth-child(n) .expertise-icon-img{
+        width:46px;
+        height:46px;
+    }
+
+    .en-business-page .expertise-compact h3,
+    .en-business-page .expertise-card h3,
+    html[lang="en"] .en-business-page .expertise-compact h3,
+    html[lang="en"] .en-business-page .expertise-card h3{
+        grid-column:2;
+        margin:0 0 4px;
+        font-size:13.2px;
+    }
+
+    .en-business-page .expertise-card p{
+        grid-column:2;
+        font-size:10.6px;
+        line-height:1.54;
+    }
+
+    .en-business-page .beyond-section{
+        padding-top:20px;
+        padding-bottom:18px;
+    }
+
+    .en-business-page .beyond-card{
+        font-size:11px;
+        line-height:1.76;
+    }
+
+    .en-business-page .contact-section{
+        padding-top:34px;
+        padding-bottom:36px;
+    }
+
+    .en-business-page .contact-lead{
+        max-width:315px;
+        margin-bottom:18px;
+        font-size:11.2px;
+    }
+
+    .en-business-page #contact .contact-info{
+        gap:8px;
+    }
+
+    .en-business-page #contact .contact-card{
+        min-height:68px;
+    }
+}
+
+/* English business icons: transparent source artwork and a stable mobile grid. */
+.en-business-page .case-icon,
+.en-business-page .expertise-visual,
+.en-business-page .expertise-icon-img{
+    background:transparent !important;
+    background-color:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+}
+
+.en-business-page .case-icon{
+    display:block;
+    width:32px;
+    height:32px;
+    object-fit:contain;
+}
+
+.en-business-page .expertise-visual{
+    display:flex;
+    width:42px;
+    height:42px;
+    overflow:visible;
+}
+
+.en-business-page .expertise-icon-img,
+.en-business-page .expertise-compact:nth-child(n) .expertise-icon-img{
+    display:block;
+    width:40px;
+    height:40px;
+    object-fit:contain;
+}
+
+@media (max-width:768px){
+    .en-business-page .case-icon{
+        width:30px;
+        height:30px;
+    }
+
+    .en-business-page .expertise-grid,
+    .en-business-page .expertise-grid-compact{
+        display:grid;
+        grid-template-columns:minmax(0, 1fr) !important;
+    }
+
+    .en-business-page .expertise-card,
+    .en-business-page .expertise-compact,
+    .en-business-page .expertise-card:nth-child(5),
+    .en-business-page .expertise-compact:nth-child(5){
+        grid-column:1 / -1 !important;
+        width:100% !important;
+        max-width:none !important;
+        justify-self:stretch !important;
+        transform:none;
+    }
+
+    .en-business-page .expertise-card,
+    .en-business-page .expertise-compact{
+        grid-template-columns:38px minmax(0, 1fr);
+    }
+
+    .en-business-page .expertise-visual{
+        width:38px;
+        height:38px;
+    }
+
+    .en-business-page .expertise-icon-img,
+    .en-business-page .expertise-compact:nth-child(n) .expertise-icon-img{
+        width:36px;
+        height:36px;
+    }
+}
+
+/* English business card: final visual refinements. */
+.en-business-page .credibility-stats{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:10px;
+}
+
+.en-business-page .credibility-stat{
+    min-width:0;
+    padding:12px 13px;
+    border:1px solid rgba(212,175,55,.24);
+    border-radius:7px;
+    background:rgba(255,255,255,.55);
+}
+
+.en-business-page .credibility-stat-wide{
+    grid-column:1 / -1;
+}
+
+.en-business-page .credibility-stat strong{
+    display:block;
+    color:var(--navy);
+    font-size:15px;
+    font-weight:900;
+    line-height:1.25;
+    white-space:nowrap;
+}
+
+.en-business-page .credibility-stat span{
+    display:block;
+    margin-top:3px;
+    color:#5f6f86;
+    font-size:11.5px;
+    font-weight:550;
+    line-height:1.45;
+}
+
+.en-business-page .value-info-groups{
+    display:grid;
+    gap:8px;
+    margin-top:14px;
+    padding-top:14px;
+    border-top:1px solid rgba(219,207,190,.64);
+}
+
+.en-business-page .value-info-groups .value-detail,
+.en-business-page .value-info-groups .value-detail + .value-detail{
+    margin:0;
+    padding:8px 10px;
+    border-radius:6px;
+    background:rgba(255,255,255,.42);
+}
+
+.en-business-page .value-info-groups .value-detail > span{
+    margin-bottom:3px;
+}
+
+.en-business-page .value-info-groups .value-detail p{
+    font-size:11px;
+    line-height:1.48;
+}
+
+.en-business-page .case-icon{
+    width:36px;
+    height:36px;
+}
+
+.en-business-page .expertise-card,
+.en-business-page .expertise-compact{
+    min-height:210px;
+}
+
+.en-business-page .expertise-visual{
+    width:46px;
+    height:46px;
+    margin-bottom:8px;
+}
+
+.en-business-page .expertise-icon-img,
+.en-business-page .expertise-compact:nth-child(n) .expertise-icon-img{
+    width:44px;
+    height:44px;
+}
+
+.en-business-page .expertise-compact h3,
+.en-business-page .expertise-card h3{
+    min-height:43px;
+    margin-bottom:6px;
+}
+
+.en-business-page .business-mission-divider,
+.en-business-page .business-mission-ornament{
+    background:transparent !important;
+    border:0;
+    box-shadow:none;
+    pointer-events:none;
+}
+
+.en-business-page .beyond-section{
+    position:relative;
+    overflow:hidden;
+    padding-top:24px;
+    padding-bottom:74px;
+}
+
+.en-business-page .beyond-section .container{
+    position:relative;
+    z-index:1;
+}
+
+.en-business-page .business-mission-divider{
+    position:relative;
+    z-index:1;
+    display:block;
+    width:clamp(220px, 20vw, 300px);
+    height:auto;
+    margin:0 auto 12px;
+    opacity:.72;
+}
+
+.en-business-page .business-mission-ornament{
+    position:absolute;
+    z-index:0;
+    right:clamp(-92px, -5vw, -42px);
+    bottom:-90px;
+    width:clamp(210px, 25vw, 340px);
+    height:auto;
+    opacity:.2;
+}
+
+.en-business-page .contact-lead{
+    max-width:620px;
+    margin:0 auto 28px;
+    text-align:center;
+}
+
+@media (max-width:768px){
+    .en-business-page .value-credibility{
+        padding:17px;
+    }
+
+    .en-business-page .credibility-stats{
+        gap:8px;
+    }
+
+    .en-business-page .credibility-stat{
+        padding:10px 11px;
+    }
+
+    .en-business-page .credibility-stat strong{
+        font-size:13.6px;
+    }
+
+    .en-business-page .credibility-stat span{
+        font-size:10.5px;
+        line-height:1.4;
+    }
+
+    .en-business-page .value-info-groups{
+        gap:7px;
+        margin-top:11px;
+        padding-top:11px;
+    }
+
+    .en-business-page .value-info-groups .value-detail,
+    .en-business-page .value-info-groups .value-detail + .value-detail{
+        padding:7px 9px;
+    }
+
+    .en-business-page .value-info-groups .value-detail p{
+        font-size:10.4px;
+        line-height:1.45;
+    }
+
+    .en-business-page .case-icon{
+        width:32px;
+        height:32px;
+    }
+
+    .en-business-page .expertise-card,
+    .en-business-page .expertise-compact{
+        min-height:0;
+        padding:14px 16px;
+        column-gap:11px;
+        align-items:start;
+    }
+
+    .en-business-page .expertise-visual{
+        width:38px;
+        height:38px;
+    }
+
+    .en-business-page .expertise-icon-img,
+    .en-business-page .expertise-compact:nth-child(n) .expertise-icon-img{
+        width:36px;
+        height:36px;
+    }
+
+    .en-business-page .expertise-compact h3,
+    .en-business-page .expertise-card h3,
+    html[lang="en"] .en-business-page .expertise-compact h3,
+    html[lang="en"] .en-business-page .expertise-card h3{
+        min-height:0;
+        margin-bottom:3px;
+        font-size:13px;
+        line-height:1.28;
+    }
+
+    .en-business-page .expertise-card p{
+        font-size:10.5px;
+        line-height:1.45;
+    }
+
+    .en-business-page .beyond-section{
+        padding-top:20px;
+        padding-bottom:46px;
+    }
+
+    .en-business-page .business-mission-divider{
+        width:180px;
+        margin-bottom:9px;
+        opacity:.62;
+    }
+
+    .en-business-page .business-mission-ornament{
+        right:-54px;
+        bottom:-38px;
+        width:168px;
+        opacity:.14;
+    }
+
+    .en-business-page .contact-lead{
+        max-width:100%;
+        margin:0 auto 24px;
+        text-align:center;
+    }
+
+    .en-business-page .site-footer{
+        padding-bottom:calc(78px + env(safe-area-inset-bottom));
+    }
+
+    .en-business-page .footer-inner{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:11px;
+        width:min(100% - 44px, 390px);
+        padding:22px 0 18px;
+        text-align:center;
+    }
+
+    .en-business-page .footer-brand{
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .en-business-page .footer-brand img{
+        width:108px;
+        max-width:108px;
+    }
+
+    .en-business-page .footer-brand p{
+        display:block !important;
+        max-width:300px;
+        font-size:11px;
+        line-height:1.55;
+        text-align:center;
+    }
+
+    .en-business-page .footer-links{
+        display:flex !important;
+        width:100%;
+        justify-content:center;
+        gap:6px 10px;
+        font-size:11px;
+        line-height:1.5;
+    }
+
+    .en-business-page .footer-links a + a::before{
+        margin:0 7px;
+    }
+
+    .en-business-page .footer-copy{
+        display:block !important;
+        max-width:270px;
+        margin:0;
+        font-size:9.8px;
+        line-height:1.45;
+        text-align:center;
+    }
+}
+
+@media (max-width:374px){
+    .en-business-page .credibility-stat strong{
+        font-size:12.8px;
+    }
+
+    .en-business-page .credibility-stat span{
+        font-size:10px;
+    }
+
+    .en-business-page .footer-inner{
+        width:min(100% - 32px, 360px);
+    }
+
+    .en-business-page .footer-links{
+        font-size:10.5px;
+    }
+}
+
+/* English business card: final mobile readability and decorative balance. */
+.en-business-page #expertise .section-subtitle{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+.en-business-page .beyond-section{
+    padding-bottom:205px;
+}
+
+.en-business-page .business-mission-divider{
+    width:clamp(250px, 23vw, 340px);
+    margin:0 auto 18px;
+    opacity:.86;
+}
+
+.en-business-page .business-mission-ornament{
+    right:clamp(18px, 3vw, 48px);
+    bottom:20px;
+    width:clamp(210px, 22vw, 290px);
+    opacity:.3;
+}
+
+@media (max-width:768px){
+    .en-business-page #expertise .section-subtitle{
+        text-align:center;
+    }
+
+    .en-business-page .beyond-section{
+        padding-bottom:158px;
+    }
+
+    .en-business-page .business-mission-divider{
+        width:205px;
+        margin-bottom:12px;
+        opacity:.76;
+    }
+
+    .en-business-page .business-mission-ornament{
+        right:14px;
+        bottom:16px;
+        width:148px;
+        opacity:.24;
+    }
+
+    .en-business-page .footer-inner{
+        overflow:visible;
+    }
+
+    .en-business-page .footer-brand p,
+    .en-business-page .footer-copy{
+        display:block !important;
+        visibility:visible !important;
+        opacity:1 !important;
+    }
+
+    .en-business-page .footer-links{
+        display:flex !important;
+        visibility:visible !important;
+        opacity:1 !important;
+    }
+
+    .en-business-page .footer-brand p{
+        font-size:11.2px;
+        line-height:1.6;
+    }
+
+    .en-business-page .footer-links a{
+        display:inline-flex;
+        align-items:center;
+        min-height:30px;
+        padding:3px 2px;
+    }
+
+    .en-business-page .footer-copy{
+        font-size:10px;
+    }
+}
+
+@media (max-width:430px){
+    .en-business-page .value-credibility{
+        padding:19px;
+    }
+
+    .en-business-page .credibility-stats{
+        grid-template-columns:minmax(0, 1fr);
+        gap:9px;
+    }
+
+    .en-business-page .credibility-stat,
+    .en-business-page .credibility-stat-wide{
+        grid-column:auto;
+        padding:12px 13px;
+    }
+
+    .en-business-page .credibility-stat strong{
+        font-size:14px;
+    }
+
+    .en-business-page .credibility-stat span{
+        margin-top:4px;
+        font-size:10.8px;
+        line-height:1.45;
+    }
+
+    .en-business-page .value-info-groups{
+        gap:8px;
+        margin-top:13px;
+        padding-top:13px;
+    }
+
+    .en-business-page .value-info-groups .value-detail,
+    .en-business-page .value-info-groups .value-detail + .value-detail{
+        padding:9px 11px;
+    }
+
+    .en-business-page .value-info-groups .value-detail p{
+        font-size:10.7px;
+        line-height:1.48;
+    }
+}
+
+@media (max-width:374px){
+    .en-business-page .credibility-stat strong{
+        font-size:13.2px;
+    }
+
+    .en-business-page .credibility-stat span{
+        font-size:10.4px;
+    }
+}
+
+/* English business card: concise product facts and clean Personal Mission. */
+.en-business-page .credibility-stats{
+    grid-template-columns:minmax(0, 1fr);
+    gap:8px;
+}
+
+.en-business-page .credibility-stat,
+.en-business-page .credibility-stat-wide{
+    grid-column:auto;
+    padding:10px 13px;
+}
+
+.en-business-page .credibility-stat .credibility-fact{
+    display:block;
+    color:var(--navy);
+    font-size:11.5px;
+    font-weight:700;
+    line-height:1.45;
+    white-space:nowrap;
+}
+
+.en-business-page .beyond-section{
+    padding-top:28px;
+    padding-bottom:34px;
+}
+
+@media (min-width:900px) and (max-width:1180px){
+    .en-business-page .value-grid{
+        grid-template-columns:minmax(0, 3fr) minmax(380px, 2fr);
+    }
+}
+
+@media (min-width:769px) and (max-width:899px){
+    .en-business-page .credibility-stat .credibility-fact{
+        white-space:normal;
+    }
+}
+
+@media (max-width:768px){
+    .en-business-page .credibility-stats{
+        gap:9px;
+    }
+
+    .en-business-page .credibility-stat,
+    .en-business-page .credibility-stat-wide{
+        padding:12px 13px;
+    }
+
+    .en-business-page .credibility-stat .credibility-fact{
+        font-size:11px;
+        line-height:1.48;
+        white-space:normal;
+    }
+
+    .en-business-page .beyond-section{
+        padding-top:24px;
+        padding-bottom:30px;
+    }
+}
+
+@media (max-width:374px){
+    .en-business-page .credibility-stat .credibility-fact{
+        font-size:10.7px;
+    }
+}
+
+/* English Product Value: Variant 1 right-column composition. */
+.en-business-page .value-highlight-list{
+    display:grid;
+    gap:12px;
+}
+
+.en-business-page .value-highlight-card{
+    display:grid;
+    grid-template-columns:40px minmax(0, 1fr);
+    align-items:center;
+    gap:13px;
+    min-height:64px;
+    padding:12px 16px;
+    border:1px solid rgba(212,175,55,.32);
+    border-radius:15px;
+    background:rgba(255,255,255,.68);
+}
+
+.en-business-page .value-highlight-icon,
+.en-business-page .value-info-icon{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    flex:0 0 auto;
+    border:0;
+    box-shadow:none;
+}
+
+.en-business-page .value-highlight-icon{
+    width:40px;
+    height:40px;
+    border-radius:11px;
+    background:rgba(255,247,227,.82);
+}
+
+.en-business-page .value-highlight-icon img{
+    width:23px;
+    height:23px;
+    object-fit:contain;
+}
+
+.en-business-page .value-highlight-text{
+    color:var(--navy);
+    font-size:12px;
+    font-weight:700;
+    line-height:1.4;
+}
+
+.en-business-page .value-credibility-divider{
+    height:1px;
+    margin:20px 0;
+    background:rgba(219,207,190,.76);
+}
+
+.en-business-page .value-info-list{
+    display:grid;
+    gap:10px;
+}
+
+.en-business-page .value-info-block{
+    display:grid;
+    grid-template-columns:40px minmax(0, 1fr);
+    align-items:start;
+    gap:12px;
+    padding:11px 10px;
+    border:1px solid rgba(219,207,190,.52);
+    border-radius:10px;
+    background:rgba(255,255,255,.38);
+}
+
+.en-business-page .value-info-icon{
+    width:40px;
+    height:40px;
+    border-radius:10px;
+    background:rgba(234,242,252,.82);
+}
+
+.en-business-page .value-info-icon img{
+    width:24px;
+    height:24px;
+    object-fit:contain;
+}
+
+.en-business-page .value-info-title{
+    display:block;
+    margin:1px 0 4px;
+    color:var(--navy);
+    font-size:10.5px;
+    font-weight:900;
+    line-height:1.25;
+    text-transform:uppercase;
+}
+
+.en-business-page .value-info-block p{
+    color:#5f6f86;
+    font-size:10.8px;
+    font-weight:550;
+    line-height:1.48;
+}
+
+@media (max-width:768px){
+    .en-business-page .value-highlight-list{
+        gap:10px;
+    }
+
+    .en-business-page .value-highlight-card{
+        grid-template-columns:36px minmax(0, 1fr);
+        gap:12px;
+        min-height:58px;
+        padding:10px 12px;
+        border-radius:14px;
+    }
+
+    .en-business-page .value-highlight-icon{
+        width:36px;
+        height:36px;
+        border-radius:10px;
+    }
+
+    .en-business-page .value-highlight-icon img{
+        width:21px;
+        height:21px;
+    }
+
+    .en-business-page .value-highlight-text{
+        font-size:11.5px;
+        line-height:1.42;
+    }
+
+    .en-business-page .value-credibility-divider{
+        margin:17px 0;
+    }
+
+    .en-business-page .value-info-list{
+        gap:8px;
+    }
+
+    .en-business-page .value-info-block{
+        grid-template-columns:36px minmax(0, 1fr);
+        gap:11px;
+        padding:10px 9px;
+    }
+
+    .en-business-page .value-info-icon{
+        width:36px;
+        height:36px;
+        border-radius:9px;
+    }
+
+    .en-business-page .value-info-icon img{
+        width:22px;
+        height:22px;
+    }
+
+    .en-business-page .value-info-title{
+        font-size:10px;
+    }
+
+    .en-business-page .value-info-block p{
+        font-size:10.5px;
+        line-height:1.45;
+    }
+}
+
+@media (max-width:374px){
+    .en-business-page .value-highlight-text{
+        font-size:11px;
+    }
+
+    .en-business-page .value-info-block p{
+        font-size:10px;
+    }
+}
+
+/* English Product Value: content-led height and quieter left-column type. */
+.en-business-page .value-section{
+    padding:44px 0 46px;
+}
+
+.en-business-page .value-section .container{
+    width:min(1220px, 88%);
+}
+
+.en-business-page .value-grid{
+    grid-template-columns:minmax(0, 3fr) minmax(340px, 2fr);
+    gap:26px;
+    align-items:center;
+}
+
+.en-business-page .value-main{
+    align-self:center;
+    padding:54px 46px;
+}
+
+.en-business-page .value-main p{
+    color:#2b3d58;
+    font-size:18px;
+    font-weight:500;
+    line-height:1.68;
+}
+
+.en-business-page .value-main p + p{
+    margin-top:14px;
+}
+
+.en-business-page .value-credibility{
+    padding:36px;
+}
+
+.en-business-page .value-highlight-list{
+    gap:12px;
+}
+
+.en-business-page .value-highlight-card{
+    grid-template-columns:34px minmax(0, 1fr);
+    gap:12px;
+    min-height:62px;
+    padding:14px 18px;
+}
+
+.en-business-page .value-highlight-icon{
+    width:34px;
+    height:34px;
+    border-radius:10px;
+}
+
+.en-business-page .value-highlight-icon img{
+    width:20px;
+    height:20px;
+}
+
+.en-business-page .value-credibility-divider{
+    margin:20px 0;
+}
+
+.en-business-page .value-info-list{
+    gap:8px;
+}
+
+.en-business-page .value-info-block{
+    grid-template-columns:36px minmax(0, 1fr);
+    gap:11px;
+    padding:9px 10px;
+}
+
+.en-business-page .value-info-icon{
+    width:36px;
+    height:36px;
+}
+
+.en-business-page .value-info-icon img{
+    width:22px;
+    height:22px;
+}
+
+@media (max-width:768px){
+    .en-business-page .value-section{
+        padding:28px 0 30px;
+    }
+
+    .en-business-page .value-section .container{
+        width:min(100% - 44px, 680px);
+    }
+
+    .en-business-page .value-grid{
+        grid-template-columns:1fr;
+        gap:14px;
+    }
+
+    .en-business-page .value-main,
+    .en-business-page .value-credibility{
+        padding:22px;
+    }
+
+    .en-business-page .value-main p{
+        font-size:15.5px;
+        font-weight:500;
+        line-height:1.62;
+    }
+
+    .en-business-page .value-main p + p{
+        margin-top:12px;
+    }
+
+    .en-business-page .value-highlight-card{
+        grid-template-columns:34px minmax(0, 1fr);
+        min-height:58px;
+        padding:12px 14px;
+    }
+
+    .en-business-page .value-highlight-icon{
+        width:34px;
+        height:34px;
+    }
+
+    .en-business-page .value-credibility-divider{
+        margin:17px 0;
+    }
+
+    .en-business-page .value-info-block{
+        grid-template-columns:34px minmax(0, 1fr);
+        padding:8px 9px;
+    }
+
+    .en-business-page .value-info-icon{
+        width:34px;
+        height:34px;
+    }
+}
+
+@media (max-width:374px){
+    .en-business-page .value-main,
+    .en-business-page .value-credibility{
+        padding:20px;
+    }
+
+    .en-business-page .value-main p{
+        font-size:15px;
+    }
+}
+
+/* English Product Value: final density and top-aligned columns. */
+.en-business-page .value-section{
+    padding:36px 0 40px;
+}
+
+.en-business-page .value-section .section-subtitle{
+    margin-bottom:20px;
+}
+
+.en-business-page .value-grid{
+    align-items:start;
+}
+
+.en-business-page .value-main{
+    align-self:start;
+    padding:50px 52px;
+}
+
+.en-business-page .value-main p{
+    color:#31415a;
+    font-size:17.5px;
+    font-weight:400;
+    line-height:1.62;
+}
+
+.en-business-page .value-main p + p{
+    margin-top:13px;
+}
+
+.en-business-page .value-credibility{
+    padding:34px;
+}
+
+.en-business-page .value-highlight-card{
+    grid-template-columns:32px minmax(0, 1fr);
+    gap:12px;
+    min-height:60px;
+    padding:14px 18px;
+}
+
+.en-business-page .value-highlight-icon{
+    width:32px;
+    height:32px;
+}
+
+.en-business-page .value-highlight-icon img{
+    width:19px;
+    height:19px;
+}
+
+.en-business-page .value-credibility-divider{
+    margin:18px 0;
+}
+
+@media (max-width:768px){
+    .en-business-page .value-section{
+        padding:24px 0 26px;
+    }
+
+    .en-business-page .value-section .section-subtitle{
+        margin-bottom:18px;
+    }
+
+    .en-business-page .value-main,
+    .en-business-page .value-credibility{
+        padding:20px;
+    }
+
+    .en-business-page .value-main p{
+        font-size:15.5px;
+        font-weight:400;
+        line-height:1.6;
+    }
+
+    .en-business-page .value-highlight-card{
+        grid-template-columns:32px minmax(0, 1fr);
+        min-height:56px;
+        padding:10px 12px;
+    }
+
+    .en-business-page .value-highlight-icon{
+        width:32px;
+        height:32px;
+    }
+
+    .en-business-page .value-credibility-divider{
+        margin:16px 0;
+    }
+
+    .en-business-page .value-info-block{
+        padding:8px;
+    }
+}
+
+@media (max-width:374px){
+    .en-business-page .value-main p{
+        font-size:15px;
+    }
+}
+
+/* English Product Value: final compact balance. */
+.en-business-page .value-section .container{
+    width:min(1180px, 88%);
+}
+
+.en-business-page .value-grid{
+    grid-template-columns:minmax(0, 1.35fr) minmax(360px, .9fr);
+    gap:26px;
+    align-items:start;
+}
+
+.en-business-page .value-main,
+.en-business-page .value-credibility{
+    height:auto;
+    min-height:auto;
+}
+
+.en-business-page .value-main{
+    padding:44px 46px;
+}
+
+.en-business-page .value-main p{
+    font-size:17px;
+    font-weight:400;
+    line-height:1.58;
+}
+
+.en-business-page .value-credibility{
+    padding:34px 34px 30px;
+}
+
+.en-business-page .value-highlight-card{
+    min-height:58px;
+    padding:13px 18px;
+}
+
+.en-business-page .value-info-block{
+    padding:10px 16px;
+}
+
+@media (max-width:768px){
+    .en-business-page .value-section .container{
+        width:min(100% - 44px, 680px);
+    }
+
+    .en-business-page .value-grid{
+        grid-template-columns:1fr;
+        gap:14px;
+    }
+
+    .en-business-page .value-main{
+        padding:26px;
+    }
+
+    .en-business-page .value-credibility{
+        padding:24px;
+    }
+
+    .en-business-page .value-main p{
+        font-size:15.5px;
+        font-weight:400;
+        line-height:1.58;
+    }
+
+    .en-business-page .value-highlight-card{
+        min-height:56px;
+        padding:10px 12px;
+    }
+
+    .en-business-page .value-info-block{
+        padding:9px 12px;
+    }
+}
+
+@media (max-width:374px){
+    .en-business-page .value-main{
+        padding:24px;
+    }
+
+    .en-business-page .value-credibility{
+        padding:22px;
+    }
+
+    .en-business-page .value-main p{
+        font-size:15px;
+    }
+}
+
+/* English mobile: one display and body typography system. */
+@media (max-width:768px){
+    .en-business-page,
+    .en-business-page button,
+    .en-business-page input,
+    .en-business-page textarea{
+        font-family:var(--font-body);
+        font-stretch:normal;
+    }
+
+    .en-business-page #value h2,
+    .en-business-page #cases h2,
+    .en-business-page #expertise h2,
+    .en-business-page #beyond h2,
+    .en-business-page #contact h2{
+        font-family:var(--font-display);
+        font-size:24px;
+        font-weight:600;
+        line-height:1.18;
+        letter-spacing:0;
+    }
+
+    .en-business-page #value .section-subtitle,
+    .en-business-page #cases .section-subtitle,
+    .en-business-page #expertise .section-subtitle,
+    .en-business-page #contact .section-subtitle{
+        font-family:var(--font-body);
+        font-size:11.5px;
+        font-weight:400;
+        line-height:1.55;
+        letter-spacing:0;
+    }
+
+    .en-business-page .value-main p,
+    .en-business-page .beyond-card,
+    .en-business-page .beyond-card p,
+    .en-business-page .contact-lead{
+        font-family:var(--font-body);
+        font-size:13px;
+        font-weight:400;
+        line-height:1.6;
+        letter-spacing:0;
+    }
+
+    .en-business-page .case-card h3,
+    .en-business-page .expertise-card h3,
+    .en-business-page .expertise-compact h3,
+    html[lang="en"] .en-business-page .expertise-card h3,
+    html[lang="en"] .en-business-page .expertise-compact h3,
+    .en-business-page #contact .contact-card strong{
+        font-family:var(--font-body);
+        font-size:14px;
+        font-weight:700;
+        line-height:1.35;
+        letter-spacing:0;
+        font-stretch:normal;
+    }
+
+    .en-business-page .case-card p,
+    .en-business-page .expertise-card p,
+    .en-business-page #contact .contact-card p{
+        font-family:var(--font-body);
+        font-size:11.8px;
+        font-weight:400;
+        line-height:1.55;
+        letter-spacing:0;
+    }
+
+    .en-business-page .case-number,
+    .en-business-page .value-highlight-text{
+        font-family:var(--font-body);
+        font-size:11px;
+        font-weight:600;
+        line-height:1.35;
+        letter-spacing:0;
+    }
+
+    .en-business-page .value-info-title{
+        font-family:var(--font-body);
+        font-size:9.5px;
+        font-weight:700;
+        line-height:1.35;
+        letter-spacing:0;
+    }
+
+    .en-business-page .value-info-block p,
+    .en-business-page .footer-brand p,
+    .en-business-page .footer-links,
+    .en-business-page .footer-copy,
+    .en-business-page .mobile-menu-link,
+    .en-business-page .bottom-nav-item{
+        font-family:var(--font-body);
+        font-stretch:normal;
+    }
+}
+
+/* English desktop: one display and body typography system. */
+@media (min-width:769px){
+    .en-business-page,
+    .en-business-page button,
+    .en-business-page input,
+    .en-business-page textarea{
+        font-family:var(--font-body);
+        font-stretch:normal;
+    }
+
+    .en-business-page #value h2,
+    .en-business-page #cases h2,
+    .en-business-page #expertise h2,
+    .en-business-page #beyond h2,
+    .en-business-page #contact h2{
+        font-family:var(--font-display);
+        font-size:32px;
+        font-weight:600;
+        line-height:1.18;
+        letter-spacing:0;
+    }
+
+    .en-business-page #value .section-subtitle,
+    .en-business-page #cases .section-subtitle,
+    .en-business-page #expertise .section-subtitle,
+    .en-business-page #contact .section-subtitle{
+        font-family:var(--font-body);
+        font-size:13px;
+        font-weight:400;
+        line-height:1.55;
+        letter-spacing:0;
+    }
+
+    .en-business-page .value-main p,
+    .en-business-page .beyond-card,
+    .en-business-page .beyond-card p,
+    .en-business-page .contact-lead{
+        font-family:var(--font-body);
+        font-size:15px;
+        font-weight:400;
+        line-height:1.65;
+        letter-spacing:0;
+    }
+
+    .en-business-page .case-card h3,
+    .en-business-page .expertise-card h3,
+    .en-business-page .expertise-compact h3,
+    html[lang="en"] .en-business-page .expertise-card h3,
+    html[lang="en"] .en-business-page .expertise-compact h3,
+    .en-business-page #contact .contact-card strong{
+        font-family:var(--font-body);
+        font-size:16px;
+        font-weight:700;
+        line-height:1.35;
+        letter-spacing:0;
+        font-stretch:normal;
+    }
+
+    .en-business-page .case-card p,
+    .en-business-page .expertise-card p,
+    .en-business-page #contact .contact-card p,
+    .en-business-page .value-info-block p{
+        font-family:var(--font-body);
+        font-size:13.5px;
+        font-weight:400;
+        line-height:1.55;
+        letter-spacing:0;
+    }
+
+    .en-business-page .case-number,
+    .en-business-page .value-highlight-text{
+        font-family:var(--font-body);
+        font-size:12px;
+        font-weight:600;
+        line-height:1.35;
+        letter-spacing:0;
+    }
+
+    .en-business-page .value-info-title{
+        font-family:var(--font-body);
+        font-size:10px;
+        font-weight:700;
+        line-height:1.35;
+        letter-spacing:0;
+    }
+
+    .en-business-page .desktop-nav,
+    .en-business-page .lang-btn,
+    .en-business-page .footer-brand p,
+    .en-business-page .footer-links,
+    .en-business-page .footer-copy{
+        font-family:var(--font-body);
+        font-stretch:normal;
+    }
+}
+
+/* Japanese business-first portfolio structure. */
+.ja-business-page,
+.ja-business-page button,
+.ja-business-page input,
+.ja-business-page textarea{
+    font-family:var(--font-body);
+    font-stretch:normal;
+}
+
+.ja-business-page .desktop-nav{
+    gap:clamp(18px, 1.7vw, 26px);
+}
+
+.ja-business-page .desktop-nav a{
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:0;
+}
+
+.ja-business-page .desktop-nav a.active{
+    color:var(--navy-soft);
+}
+
+.ja-business-page .header .lang-btn{
+    min-width:38px;
+    height:32px;
+    padding:0 9px;
+    border:1px solid rgba(212,175,55,.52);
+    border-radius:7px;
+    background:rgba(255,250,243,.88);
+    box-shadow:0 5px 14px rgba(13,27,51,.05);
+    color:var(--navy);
+    font-size:12px;
+    letter-spacing:0;
+}
+
+.ja-business-page #value,
+.ja-business-page #cases,
+.ja-business-page #expertise,
+.ja-business-page #beyond,
+.ja-business-page #contact{
+    scroll-margin-top:92px;
+}
+
+.ja-business-page .hero-role{
+    max-width:500px;
+    color:#31415a;
+    font-size:clamp(13px, 1.15vw, 16px);
+    font-weight:600;
+    line-height:1.55;
+    letter-spacing:0;
+}
+
+.ja-business-page .hero-buttons{
+    max-width:440px;
+    margin-bottom:36px;
+}
+
+.ja-business-page .value-section{
+    padding:36px 0 40px;
+    background:rgba(255,253,249,.95);
+    border-top:1px solid rgba(232,223,209,.72);
+    border-bottom:1px solid rgba(232,223,209,.72);
+}
+
+.ja-business-page .value-section .container{
+    width:min(1180px, 88%);
+}
+
+.ja-business-page .cases-section{
+    padding:52px 0;
+    background:
+        radial-gradient(circle at 3% 24%, rgba(47,111,206,.045), transparent 22%),
+        radial-gradient(circle at 97% 78%, rgba(245,205,210,.13), transparent 24%),
+        rgba(255,253,249,.72);
+}
+
+.ja-business-page .cases-section .container{
+    width:min(1040px, 88%);
+}
+
+.ja-business-page #expertise.section{
+    padding:52px 0;
+}
+
+.ja-business-page #expertise .container{
+    width:min(1100px, 90%);
+}
+
+.ja-business-page .value-section h2,
+.ja-business-page .cases-section h2,
+.ja-business-page #expertise h2,
+.ja-business-page #beyond h2,
+.ja-business-page #contact h2{
+    font-family:var(--font-body);
+    color:var(--navy);
+    font-size:32px;
+    font-weight:700;
+    line-height:1.22;
+    letter-spacing:0;
+}
+
+.ja-business-page .value-section h2,
+.ja-business-page .cases-section h2,
+.ja-business-page #expertise h2{
+    margin-bottom:28px;
+}
+
+.ja-business-page #beyond h2,
+.ja-business-page #contact h2{
+    margin-bottom:20px;
+}
+
+.ja-business-page .value-section .section-subtitle,
+.ja-business-page .cases-section .section-subtitle,
+.ja-business-page #expertise .section-subtitle,
+.ja-business-page #contact .section-subtitle{
+    max-width:620px;
+    margin:-18px auto 20px;
+    color:#647186;
+    font-family:var(--font-body);
+    font-size:13px;
+    font-weight:400;
+    line-height:1.65;
+    text-align:center;
+    letter-spacing:0;
+}
+
+.ja-business-page .value-grid{
+    display:grid;
+    grid-template-columns:minmax(0, 1.35fr) minmax(360px, .9fr);
+    gap:26px;
+    align-items:start;
+}
+
+.ja-business-page .value-main,
+.ja-business-page .value-credibility{
+    height:auto;
+    min-height:auto;
+    border:1px solid rgba(219,207,190,.78);
+    border-radius:8px;
+    background:rgba(255,255,255,.82);
+    box-shadow:0 13px 30px rgba(13,27,51,.045);
+}
+
+.ja-business-page .value-main{
+    padding:44px 46px;
+}
+
+.ja-business-page .value-credibility{
+    padding:34px 34px 30px;
+    background:rgba(255,250,243,.78);
+}
+
+.ja-business-page .value-main p{
+    color:#31415a;
+    font-family:var(--font-body);
+    font-size:16px;
+    font-weight:400;
+    line-height:1.82;
+    letter-spacing:0;
+}
+
+.ja-business-page .value-main p + p{
+    margin-top:12px;
+}
+
+.ja-business-page .value-text-mobile,
+.ja-business-page .mission-text-mobile{
+    display:none;
+}
+
+.ja-business-page .value-highlight-list{
+    display:grid;
+    gap:12px;
+}
+
+.ja-business-page .value-highlight-card{
+    display:grid;
+    grid-template-columns:32px minmax(0, 1fr);
+    align-items:center;
+    gap:12px;
+    min-height:58px;
+    padding:13px 18px;
+    border:1px solid rgba(212,175,55,.32);
+    border-radius:15px;
+    background:rgba(255,255,255,.68);
+}
+
+.ja-business-page .value-highlight-icon,
+.ja-business-page .value-info-icon{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    flex:0 0 auto;
+    border:0;
+    box-shadow:none;
+}
+
+.ja-business-page .value-highlight-icon{
+    width:32px;
+    height:32px;
+    border-radius:10px;
+    background:rgba(255,247,227,.82);
+}
+
+.ja-business-page .value-highlight-icon img{
+    width:19px;
+    height:19px;
+    object-fit:contain;
+}
+
+.ja-business-page .value-highlight-text{
+    color:var(--navy);
+    font-family:var(--font-body);
+    font-size:12px;
+    font-weight:600;
+    line-height:1.45;
+    letter-spacing:0;
+}
+
+.ja-business-page .value-credibility-divider{
+    height:1px;
+    margin:18px 0;
+    background:rgba(219,207,190,.76);
+}
+
+.ja-business-page .value-info-list{
+    display:grid;
+    gap:8px;
+}
+
+.ja-business-page .value-info-block{
+    display:grid;
+    grid-template-columns:36px minmax(0, 1fr);
+    align-items:start;
+    gap:11px;
+    padding:10px 16px;
+    border:1px solid rgba(219,207,190,.52);
+    border-radius:10px;
+    background:rgba(255,255,255,.38);
+}
+
+.ja-business-page .value-info-icon{
+    width:36px;
+    height:36px;
+    border-radius:10px;
+    background:rgba(234,242,252,.82);
+}
+
+.ja-business-page .value-info-icon img{
+    width:22px;
+    height:22px;
+    object-fit:contain;
+}
+
+.ja-business-page .value-info-title{
+    display:block;
+    margin:1px 0 4px;
+    color:var(--navy);
+    font-family:var(--font-body);
+    font-size:10px;
+    font-weight:700;
+    line-height:1.35;
+    text-transform:none;
+    letter-spacing:0;
+}
+
+.ja-business-page .value-info-block p{
+    color:#5f6f86;
+    font-family:var(--font-body);
+    font-size:13px;
+    font-weight:400;
+    line-height:1.55;
+    letter-spacing:0;
+}
+
+.ja-business-page .case-grid{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0,1fr));
+    gap:16px;
+    grid-auto-rows:1fr;
+}
+
+.ja-business-page .case-card{
+    min-height:236px;
+    padding:22px 24px 21px;
+    border:1px solid rgba(219,207,190,.82);
+    border-radius:8px;
+    background:rgba(255,255,255,.86);
+    box-shadow:0 10px 24px rgba(13,27,51,.045);
+    transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.ja-business-page .case-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 18px 42px rgba(13,27,51,.09);
+}
+
+.ja-business-page .case-card--wide{
+    grid-column:1 / -1;
+    width:calc((100% - 16px) / 2);
+    min-height:236px;
+    justify-self:center;
+}
+
+.ja-business-page .case-card-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:11px;
+}
+
+.ja-business-page .case-number{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:31px;
+    height:31px;
+    border-radius:50%;
+    color:var(--gold);
+    background:rgba(255,250,243,.92);
+    border:1px solid rgba(212,175,55,.35);
+    font-family:var(--font-body);
+    font-size:12px;
+    font-weight:600;
+    line-height:1.35;
+    letter-spacing:0;
+}
+
+.ja-business-page .case-icon{
+    width:54px;
+    height:54px;
+    object-fit:contain;
+    background:transparent;
+    border:0;
+    box-shadow:none;
+}
+
+.ja-business-page .case-card h3{
+    margin-bottom:8px;
+    color:var(--navy);
+    font-family:var(--font-body);
+    font-size:16px;
+    font-weight:700;
+    line-height:1.5;
+    text-align:left;
+    letter-spacing:0;
+}
+
+.ja-business-page .case-card p{
+    color:#40516a;
+    font-family:var(--font-body);
+    font-size:13px;
+    font-weight:400;
+    line-height:1.75;
+    letter-spacing:0;
+}
+
+.ja-business-page .expertise-grid,
+.ja-business-page .expertise-grid-compact{
+    display:grid;
+    grid-template-columns:repeat(5, minmax(0,1fr));
+    gap:16px;
+    align-items:stretch;
+}
+
+.ja-business-page .expertise-card,
+.ja-business-page .expertise-compact{
+    min-height:218px;
+    padding:16px 14px;
+    border:1px solid rgba(232,223,209,.95);
+    border-radius:8px;
+    background:rgba(255,255,255,.86);
+    box-shadow:0 9px 22px rgba(13,27,51,.04);
+}
+
+.ja-business-page .expertise-visual{
+    width:56px;
+    height:56px;
+    margin:0 auto 9px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:transparent;
+    border:0;
+    box-shadow:none;
+}
+
+.ja-business-page .expertise-icon-img,
+.ja-business-page .expertise-compact:nth-child(n) .expertise-icon-img{
+    width:54px;
+    height:54px;
+    object-fit:contain;
+    background:transparent;
+    border:0;
+    box-shadow:none;
+}
+
+.ja-business-page .expertise-compact h3,
+.ja-business-page .expertise-card h3{
+    min-height:49px;
+    margin:0 0 7px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--navy);
+    font-family:var(--font-body);
+    font-size:14px;
+    font-weight:700;
+    line-height:1.45;
+    text-align:center;
+    letter-spacing:0;
+}
+
+.ja-business-page .expertise-card p{
+    color:#40516a;
+    font-family:var(--font-body);
+    font-size:12px;
+    font-weight:400;
+    line-height:1.68;
+    text-align:center;
+    letter-spacing:0;
+}
+
+.ja-business-page .beyond-section{
+    padding-top:28px;
+    padding-bottom:34px;
+}
+
+.ja-business-page .beyond-card{
+    max-width:760px;
+    color:#2c3d57;
+    font-family:var(--font-body);
+    font-size:15px;
+    font-weight:400;
+    line-height:1.9;
+    letter-spacing:0;
+}
+
+.ja-business-page .beyond-card p + p{
+    margin-top:8px;
+}
+
+.ja-business-page .contact-section{
+    padding-top:48px;
+    padding-bottom:50px;
+}
+
+.ja-business-page .contact-lead{
+    max-width:620px;
+    color:#4f5f78;
+    font-size:13px;
+    line-height:1.7;
+}
+
+.ja-business-page #contact .contact-info{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0,1fr));
+    width:min(900px,86%);
+    gap:14px;
+}
+
+.ja-business-page #contact .contact-card{
+    min-height:86px;
+    padding:16px 18px;
+}
+
+.ja-business-page #contact .contact-card strong{
+    font-family:var(--font-body);
+    font-size:16px;
+    font-weight:700;
+    line-height:1.35;
+    letter-spacing:0;
+}
+
+.ja-business-page #contact .contact-card p{
+    font-family:var(--font-body);
+    font-size:13px;
+    font-weight:400;
+    line-height:1.55;
+    letter-spacing:0;
+}
+
+@media (min-width:769px) and (max-width:1180px){
+    .ja-business-page .expertise-grid,
+    .ja-business-page .expertise-grid-compact{
+        grid-template-columns:repeat(3, minmax(0,1fr));
+    }
+
+    .ja-business-page .expertise-card:nth-child(5){
+        grid-column:2;
+    }
+}
+
+@media (max-width:768px){
+    .ja-business-page .hero-approved{
+        display:none;
+    }
+
+    .ja-business-page .mobile-hero-image-section--ja .hero-hotspot-linkedin{
+        left:6.4%;
+        top:42.8%;
+        width:40.8%;
+        height:6.2%;
+    }
+
+    .ja-business-page .mobile-hero-image-section--ja .hero-hotspot-contact{
+        left:6.4%;
+        top:50.4%;
+        width:40.8%;
+        height:6.2%;
+    }
+
+    .ja-business-page .mobile-hero-image-section--ja .hero-hotspot-resume{
+        left:6.4%;
+        top:58.0%;
+        width:40.8%;
+        height:6.2%;
+    }
+
+    .ja-business-page .value-section,
+    .ja-business-page .cases-section,
+    .ja-business-page #expertise.section{
+        padding:24px 0 26px;
+    }
+
+    .ja-business-page .value-section .container,
+    .ja-business-page .cases-section .container,
+    .ja-business-page #expertise .container{
+        width:min(100% - 44px, 680px);
+    }
+
+    .ja-business-page .value-section h2,
+    .ja-business-page .cases-section h2,
+    .ja-business-page #expertise h2,
+    .ja-business-page #beyond h2,
+    .ja-business-page #contact h2{
+        margin-bottom:12px;
+        font-size:24px;
+        font-weight:700;
+        line-height:1.25;
+        letter-spacing:0;
+    }
+
+    .ja-business-page .value-section .section-subtitle,
+    .ja-business-page .cases-section .section-subtitle,
+    .ja-business-page #expertise .section-subtitle,
+    .ja-business-page #contact .section-subtitle{
+        max-width:340px;
+        margin:0 auto 18px;
+        font-size:11.5px;
+        font-weight:400;
+        line-height:1.65;
+        letter-spacing:0;
+    }
+
+    .ja-business-page .value-grid,
+    .ja-business-page .case-grid,
+    .ja-business-page .expertise-grid,
+    .ja-business-page .expertise-grid-compact{
+        grid-template-columns:1fr;
+        gap:14px;
+    }
+
+    .ja-business-page .value-main{
+        padding:26px;
+    }
+
+    .ja-business-page .value-credibility{
+        padding:24px;
+    }
+
+    .ja-business-page .value-main p{
+        font-size:13px;
+        font-weight:400;
+        line-height:1.75;
+    }
+
+    .ja-business-page .value-text-desktop,
+    .ja-business-page .mission-text-desktop{
+        display:none;
+    }
+
+    .ja-business-page .value-text-mobile,
+    .ja-business-page .mission-text-mobile{
+        display:block;
+    }
+
+    .ja-business-page .value-highlight-card{
+        grid-template-columns:32px minmax(0, 1fr);
+        min-height:56px;
+        padding:10px 12px;
+    }
+
+    .ja-business-page .value-highlight-text{
+        font-size:11px;
+        line-height:1.45;
+    }
+
+    .ja-business-page .value-info-block{
+        padding:9px 12px;
+    }
+
+    .ja-business-page .value-info-block p{
+        font-size:11px;
+        line-height:1.55;
+    }
+
+    .ja-business-page .case-card,
+    .ja-business-page .case-card--wide{
+        grid-column:auto;
+        width:100%;
+        min-height:0;
+        padding:18px;
+        border-radius:12px;
+    }
+
+    .ja-business-page .case-card h3{
+        margin-bottom:7px;
+        font-size:14px;
+        line-height:1.45;
+    }
+
+    .ja-business-page .case-card p{
+        font-size:11.8px;
+        line-height:1.62;
+    }
+
+    .ja-business-page .case-icon{
+        width:42px;
+        height:42px;
+    }
+
+    .ja-business-page .expertise-card,
+    .ja-business-page .expertise-compact{
+        min-height:0;
+        width:100%;
+        max-width:none;
+        padding:17px 18px;
+        border-radius:12px;
+        text-align:left;
+    }
+
+    .ja-business-page .expertise-card:nth-child(5),
+    .ja-business-page .expertise-compact:nth-child(5){
+        grid-column:auto;
+    }
+
+    .ja-business-page .expertise-visual{
+        width:42px;
+        height:42px;
+        margin:0 0 8px;
+    }
+
+    .ja-business-page .expertise-icon-img,
+    .ja-business-page .expertise-compact:nth-child(n) .expertise-icon-img{
+        width:40px;
+        height:40px;
+    }
+
+    .ja-business-page .expertise-compact h3,
+    .ja-business-page .expertise-card h3{
+        min-height:0;
+        margin-bottom:6px;
+        justify-content:flex-start;
+        font-size:14px;
+        line-height:1.4;
+        text-align:left;
+    }
+
+    .ja-business-page .expertise-card p{
+        font-size:11.8px;
+        line-height:1.58;
+        text-align:left;
+    }
+
+    .ja-business-page .beyond-section{
+        padding-top:24px;
+        padding-bottom:30px;
+    }
+
+    .ja-business-page .beyond-card{
+        width:min(100% - 44px, 620px);
+        max-width:min(100% - 44px, 620px);
+        font-size:13px;
+        line-height:1.75;
+    }
+
+    .ja-business-page .contact-section{
+        padding-top:28px;
+        padding-bottom:30px;
+    }
+
+    .ja-business-page .contact-lead{
+        max-width:340px;
+        margin:0 auto 18px;
+        text-align:center;
+    }
+
+    .ja-business-page #contact .contact-info{
+        width:min(100% - 44px, 560px);
+        grid-template-columns:1fr;
+        gap:9px;
+    }
+
+    .ja-business-page #contact .contact-card{
+        min-height:66px;
+        flex-direction:row;
+        justify-content:flex-start;
+        padding:12px 14px;
+        text-align:left;
+    }
+
+    .ja-business-page #contact .contact-card p{
+        display:block;
+        font-size:11px;
+    }
+
+    .ja-business-page .site-footer{
+        padding-bottom:calc(78px + env(safe-area-inset-bottom));
+    }
+
+    .ja-business-page .footer-inner{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:11px;
+        width:min(100% - 44px, 390px);
+        padding:22px 0 18px;
+        text-align:center;
+        overflow:visible;
+    }
+
+    .ja-business-page .footer-brand{
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .ja-business-page .footer-brand img{
+        width:108px;
+        max-width:108px;
+    }
+
+    .ja-business-page .footer-brand p{
+        display:block;
+        max-width:300px;
+        font-family:var(--font-body);
+        font-size:11.2px;
+        line-height:1.6;
+        text-align:center;
+        letter-spacing:0;
+    }
+
+    .ja-business-page .footer-links{
+        display:flex;
+        width:100%;
+        justify-content:center;
+        gap:6px 10px;
+        font-family:var(--font-body);
+        font-size:11px;
+        line-height:1.5;
+        letter-spacing:0;
+    }
+
+    .ja-business-page .footer-links a{
+        display:inline-flex;
+        align-items:center;
+        min-height:30px;
+        padding:3px 2px;
+    }
+
+    .ja-business-page .footer-links a + a::before{
+        margin:0 7px;
+    }
+
+    .ja-business-page .footer-copy{
+        display:block;
+        max-width:270px;
+        margin:0;
+        font-family:var(--font-body);
+        font-size:10px;
+        line-height:1.45;
+        text-align:center;
+        letter-spacing:0;
+    }
+}
+
+@media (max-width:374px){
+    .ja-business-page .value-section .container,
+    .ja-business-page .cases-section .container,
+    .ja-business-page #expertise .container,
+    .ja-business-page #contact .contact-info{
+        width:min(100% - 32px, 680px);
+    }
+
+    .ja-business-page .value-main{
+        padding:24px;
+    }
+
+    .ja-business-page .value-credibility{
+        padding:22px;
+    }
+
+    .ja-business-page .value-main p,
+    .ja-business-page .beyond-card{
+        font-size:12.4px;
+    }
+
+    .ja-business-page .case-card p,
+    .ja-business-page .expertise-card p{
+        font-size:11.3px;
+    }
+
+    .ja-business-page .footer-inner{
+        width:min(100% - 32px, 360px);
+    }
+
+    .ja-business-page .footer-links{
+        font-size:10.5px;
+    }
+}
+
+/* =========================================================
+   Mobile compression: cases carousel and expertise accordion
+========================================================= */
+
+.case-carousel-status{
+    display:none;
+}
+
+.expertise-accordion-trigger{
+    appearance:none;
+    background:none;
+    border:0;
+    color:inherit;
+    font:inherit;
+    padding:0;
+}
+
+.expertise-accordion-indicator{
+    display:none;
+}
+
+@media (max-width:768px){
+    .en-business-page .cases-section.reveal,
+    .en-business-page #expertise.reveal,
+    .ja-business-page .cases-section.reveal,
+    .ja-business-page #expertise.reveal{
+        opacity:1 !important;
+        transform:none !important;
+    }
+
+    .en-business-page .cases-section,
+    .ja-business-page .cases-section{
+        overflow:hidden;
+    }
+
+    .en-business-page .case-grid,
+    .ja-business-page .case-grid{
+        display:flex;
+        grid-template-columns:none;
+        align-items:stretch;
+        gap:14px;
+        margin-inline:-2px;
+        padding:2px 18px 8px 2px;
+        overflow-x:auto;
+        overscroll-behavior-x:contain;
+        scroll-snap-type:x mandatory;
+        scroll-padding-left:2px;
+        -webkit-overflow-scrolling:touch;
+        scrollbar-width:none;
+    }
+
+    .en-business-page .case-grid::-webkit-scrollbar,
+    .ja-business-page .case-grid::-webkit-scrollbar{
+        display:none;
+    }
+
+    .en-business-page .case-card,
+    .en-business-page .case-card--wide,
+    .ja-business-page .case-card,
+    .ja-business-page .case-card--wide{
+        flex:0 0 min(86%, 560px);
+        width:auto;
+        max-width:none;
+        min-height:0;
+        height:auto;
+        padding:18px 19px 17px;
+        display:flex;
+        flex-direction:column;
+        scroll-snap-align:start;
+        scroll-snap-stop:always;
+        transform:none;
+    }
+
+    .en-business-page .case-card:hover,
+    .ja-business-page .case-card:hover{
+        transform:none;
+    }
+
+    .en-business-page .case-card p,
+    .ja-business-page .case-card p{
+        flex:0 1 auto;
+        margin-bottom:0;
+    }
+
+    .case-carousel-status{
+        display:block;
+        margin:6px auto 0;
+        color:#6c7890;
+        font-family:var(--font-body);
+        font-size:10.5px;
+        font-weight:700;
+        line-height:1.4;
+        letter-spacing:.08em;
+        text-align:center;
+    }
+
+    .en-business-page .expertise-grid,
+    .en-business-page .expertise-grid-compact,
+    .ja-business-page .expertise-grid,
+    .ja-business-page .expertise-grid-compact{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    .en-business-page .expertise-card,
+    .en-business-page .expertise-compact,
+    .ja-business-page .expertise-card,
+    .ja-business-page .expertise-compact{
+        display:block;
+        min-height:0;
+        padding:15px;
+        overflow:hidden;
+    }
+
+    .en-business-page .expertise-accordion-trigger,
+    .ja-business-page .expertise-accordion-trigger{
+        display:grid;
+        grid-template-columns:42px minmax(0, 1fr) 22px;
+        align-items:center;
+        align-content:center;
+        gap:12px;
+        width:100%;
+        min-height:46px;
+        cursor:pointer;
+        text-align:left;
+    }
+
+    .en-business-page .expertise-accordion-trigger:focus-visible,
+    .ja-business-page .expertise-accordion-trigger:focus-visible{
+        outline:2px solid rgba(212,175,55,.72);
+        outline-offset:4px;
+        border-radius:10px;
+    }
+
+    .en-business-page .expertise-accordion-trigger .expertise-visual,
+    .ja-business-page .expertise-accordion-trigger .expertise-visual{
+        grid-column:1;
+        grid-row:1;
+        align-self:center;
+        width:42px;
+        height:42px;
+        margin:0;
+    }
+
+    .en-business-page .expertise-accordion-trigger .expertise-icon-img,
+    .en-business-page .expertise-accordion-trigger .expertise-compact:nth-child(n) .expertise-icon-img,
+    .ja-business-page .expertise-accordion-trigger .expertise-icon-img,
+    .ja-business-page .expertise-accordion-trigger .expertise-compact:nth-child(n) .expertise-icon-img{
+        width:40px;
+        height:40px;
+    }
+
+    .en-business-page .expertise-accordion-trigger h3,
+    .ja-business-page .expertise-accordion-trigger h3{
+        grid-column:2;
+        grid-row:1;
+        min-height:0;
+        margin:0;
+        display:block;
+        align-self:center;
+        color:var(--navy);
+        font-family:var(--font-body);
+        font-size:14px;
+        font-weight:700;
+        line-height:1.32;
+        text-align:left;
+        letter-spacing:0;
+    }
+
+    html[lang="en"] .en-business-page .expertise-accordion-trigger h3,
+    html[lang="ja"] .ja-business-page .expertise-accordion-trigger h3{
+        min-height:0;
+        margin:0;
+    }
+
+    .en-business-page .expertise-accordion-indicator,
+    .ja-business-page .expertise-accordion-indicator{
+        display:block;
+        position:relative;
+        grid-column:3;
+        grid-row:1;
+        align-self:center;
+        width:22px;
+        height:22px;
+        border-radius:50%;
+        border:1px solid rgba(212,175,55,.38);
+        background:rgba(255,250,243,.78);
+    }
+
+    .en-business-page .expertise-accordion-indicator::before,
+    .en-business-page .expertise-accordion-indicator::after,
+    .ja-business-page .expertise-accordion-indicator::before,
+    .ja-business-page .expertise-accordion-indicator::after{
+        content:"";
+        position:absolute;
+        left:50%;
+        top:50%;
+        width:9px;
+        height:1.5px;
+        border-radius:999px;
+        background:var(--gold);
+        transform:translate(-50%, -50%);
+        transition:transform .22s ease, opacity .22s ease;
+    }
+
+    .en-business-page .expertise-accordion-indicator::after,
+    .ja-business-page .expertise-accordion-indicator::after{
+        transform:translate(-50%, -50%) rotate(90deg);
+    }
+
+    .en-business-page .expertise-card.is-open .expertise-accordion-indicator::after,
+    .ja-business-page .expertise-card.is-open .expertise-accordion-indicator::after{
+        opacity:0;
+        transform:translate(-50%, -50%) rotate(0deg);
+    }
+
+    .en-business-page .expertise-accordion-panel,
+    .ja-business-page .expertise-accordion-panel{
+        max-height:0;
+        margin:0;
+        opacity:0;
+        overflow:hidden;
+        transition:max-height .28s ease, opacity .22s ease, margin-top .22s ease;
+    }
+
+    .en-business-page .expertise-card.is-open .expertise-accordion-panel,
+    .ja-business-page .expertise-card.is-open .expertise-accordion-panel{
+        max-height:180px;
+        margin-top:11px;
+        opacity:1;
+    }
+
+    .en-business-page .expertise-card p,
+    .ja-business-page .expertise-card p{
+        text-align:left;
+    }
+}
+
+@media (max-width:374px){
+    .en-business-page .case-card,
+    .en-business-page .case-card--wide,
+    .ja-business-page .case-card,
+    .ja-business-page .case-card--wide{
+        flex-basis:88%;
+        padding:17px 17px 16px;
+    }
+
+    .en-business-page .expertise-card,
+    .en-business-page .expertise-compact,
+    .ja-business-page .expertise-card,
+    .ja-business-page .expertise-compact{
+        padding:14px;
+    }
+
+    .en-business-page .expertise-accordion-trigger,
+    .ja-business-page .expertise-accordion-trigger{
+        grid-template-columns:38px minmax(0, 1fr) 22px;
+        gap:10px;
+        min-height:44px;
+    }
+
+    .en-business-page .expertise-accordion-trigger .expertise-visual,
+    .ja-business-page .expertise-accordion-trigger .expertise-visual{
+        width:38px;
+        height:38px;
+    }
+
+    .en-business-page .expertise-accordion-trigger .expertise-icon-img,
+    .ja-business-page .expertise-accordion-trigger .expertise-icon-img{
+        width:36px;
+        height:36px;
+    }
+
+    .en-business-page .expertise-accordion-trigger h3,
+    .ja-business-page .expertise-accordion-trigger h3{
+        font-size:13px;
     }
 }

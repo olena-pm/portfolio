@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-labelledby="title desc">
-  <title id="title">Resume download icon</title>
-  <desc id="desc">Document download icon for resume button</desc>
-  <path d="M7 4.5h6.2L17 8.3v11.2H7V4.5z" stroke="#0A1730" stroke-width="1.8" stroke-linejoin="round"/>
-  <path d="M13.2 4.7v3.8H17" stroke="#0A1730" stroke-width="1.5" stroke-linejoin="round"/>
-  <path d="M12 10.7v4.4M9.9 13.3l2.1 2.1 2.1-2.1" stroke="#D9B833" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>

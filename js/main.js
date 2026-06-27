@@ -39,28 +39,10 @@ mobileLinks.forEach(link => {
 
 window.addEventListener("pageshow", closeMobileMenu);
 
-/* Accordion */
-
-const accordionHeaders = document.querySelectorAll(".accordion-header");
-
-accordionHeaders.forEach(header => {
-    header.addEventListener("click", () => {
-        const content = header.nextElementSibling;
-
-        if(content.style.maxHeight){
-            content.style.maxHeight = null;
-            header.classList.remove("open");
-        }else{
-            content.style.maxHeight = content.scrollHeight + "px";
-            header.classList.add("open");
-        }
-    });
-});
-
 /* Reveal animation */
 
 const revealElements = document.querySelectorAll(
-    ".section, .card, .timeline-item, .education-card, .global-card, .beyond-card"
+    ".section, .card, .beyond-card"
 );
 
 revealElements.forEach(element => {
@@ -128,196 +110,156 @@ sections.forEach(section => {
     navObserver.observe(section);
 });
 
-/* Contact form via mailto */
-
-const contactForm = document.getElementById("contactForm");
-
-if(contactForm){
-contactForm.addEventListener("submit", event => {
-    event.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    const pageLang = document.documentElement.lang;
-
-    const subjectText =
-        pageLang === "ja"
-        ? `ポートフォリオサイトからのお問い合わせ：${name}`
-        : `Portfolio Website Contact from ${name}`;
-
-    const subject = encodeURIComponent(subjectText);
-
-    const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-    );
-
-    window.location.href = `mailto:olenalobachova.jp8@gmail.com?subject=${subject}&body=${body}`;
-});
-}
-
-/* Expertise expandable cards */
-
-const expertiseCards = document.querySelectorAll(".expertise-card");
-
-expertiseCards.forEach(card => {
-    const toggle = card.querySelector(".expertise-toggle");
-    const body = card.querySelector(".expertise-body");
-
-    if(!toggle || !body){
-        return;
-    }
-
-    toggle.addEventListener("click", () => {
-        const isOpen = card.classList.contains("open");
-
-        if(isOpen){
-            card.classList.remove("open");
-            body.style.maxHeight = null;
-        }else{
-            card.classList.add("open");
-            body.style.maxHeight = body.scrollHeight + "px";
-        }
-    });
-});
-
-/* Open expertise cards by default on desktop */
-if(window.innerWidth > 900){
-    expertiseCards.forEach(card => {
-        const body = card.querySelector(".expertise-body");
-        card.classList.add("open");
-        body.style.maxHeight = body.scrollHeight + "px";
-    });
-}
-
 /* Mobile compact accordions and bottom navigation */
 
 const isJapanesePage = document.documentElement.lang === "ja";
+const isJapaneseBusinessPage = document.body.classList.contains("ja-business-page");
 const mobileMediaQuery = window.matchMedia("(max-width: 768px)");
 
-function makeToggleButton(label) {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "mobile-card-toggle";
-    button.setAttribute("aria-expanded", "false");
-    button.setAttribute("aria-label", label);
-    button.innerHTML = '<span aria-hidden="true"></span>';
-    return button;
-}
+/* Mobile cases carousel and expertise accordions */
 
-function ensureMobileToggle(card, heading, label) {
-    if(!card || !heading || card.querySelector(".mobile-card-toggle")){
+const businessPage = document.body.classList.contains("en-business-page")
+    || document.body.classList.contains("ja-business-page");
+
+function setupMobileCasesCarousel() {
+    if(!businessPage){
         return;
     }
 
-    const toggle = makeToggleButton(label);
-    heading.appendChild(toggle);
-    card.classList.add("mobile-collapsible");
+    const grid = document.querySelector(".cases-section .case-grid");
 
-    const toggleCard = () => {
-        const isOpen = card.classList.toggle("is-open");
-        toggle.setAttribute("aria-expanded", String(isOpen));
+    if(!grid || grid.dataset.mobileCarouselReady === "true"){
+        return;
+    }
+
+    const cards = Array.from(grid.querySelectorAll(".case-card"));
+
+    if(!cards.length){
+        return;
+    }
+
+    grid.dataset.mobileCarouselReady = "true";
+    grid.setAttribute("tabindex", "0");
+    grid.setAttribute("aria-label", isJapanesePage ? "主なプロダクト実績のカルーセル" : "Selected product cases carousel");
+
+    const status = document.createElement("p");
+    status.className = "case-carousel-status";
+    status.setAttribute("aria-live", "polite");
+    grid.insertAdjacentElement("afterend", status);
+
+    const updateStatus = () => {
+        const viewportCenter = grid.scrollLeft + grid.clientWidth / 2;
+        let activeIndex = 0;
+        let closestDistance = Infinity;
+
+        cards.forEach((card, index) => {
+            const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+            const distance = Math.abs(cardCenter - viewportCenter);
+
+            if(distance < closestDistance){
+                closestDistance = distance;
+                activeIndex = index;
+            }
+        });
+
+        status.textContent = `${String(activeIndex + 1).padStart(2, "0")} / ${String(cards.length).padStart(2, "0")}`;
     };
 
-    toggle.addEventListener("click", event => {
-        event.preventDefault();
-        event.stopPropagation();
-        toggleCard();
-    });
+    let ticking = false;
 
-    heading.addEventListener("click", event => {
-        if(!mobileMediaQuery.matches || event.target.closest("a")){
+    grid.addEventListener("scroll", () => {
+        if(ticking){
             return;
         }
 
-        event.preventDefault();
-        toggleCard();
-    });
+        ticking = true;
+        window.requestAnimationFrame(() => {
+            updateStatus();
+            ticking = false;
+        });
+    }, { passive:true });
+
+    window.addEventListener("resize", updateStatus);
+    updateStatus();
 }
 
-document.querySelectorAll(".about-block").forEach(card => {
-    const heading = card.querySelector(".about-heading");
-    card.classList.add("mobile-collapsible", "mobile-readmore-card");
-
-    if(!card.querySelector(".mobile-readmore")){
-        const openLabel = isJapanesePage ? "続きを読む" : "Read more";
-        const closeLabel = isJapanesePage ? "閉じる" : "Close";
-        const readMore = document.createElement("button");
-        readMore.type = "button";
-        readMore.className = "mobile-readmore";
-        readMore.setAttribute("aria-expanded", "false");
-        readMore.textContent = openLabel;
-        readMore.addEventListener("click", event => {
-            event.preventDefault();
-            event.stopPropagation();
-
-            const isOpen = card.classList.toggle("is-open");
-            readMore.setAttribute("aria-expanded", String(isOpen));
-            readMore.textContent = isOpen ? closeLabel : openLabel;
-        });
-        card.appendChild(readMore);
-    }
-});
-
-document.querySelectorAll(".timeline-card").forEach(card => {
-    const heading = card.querySelector(".timeline-heading");
-    const title = heading?.querySelector("h3")?.textContent?.trim() || "";
-    ensureMobileToggle(card, heading, title);
-});
-
-document.querySelectorAll(".skill-group").forEach(card => {
-    const heading = card.querySelector("h3");
-    const title = heading?.textContent?.trim() || "";
-    ensureMobileToggle(card, heading, title);
-});
-
-document.querySelectorAll(".education-card-continuous").forEach(card => {
-    card.classList.add("is-open", "mobile-always-open");
-});
-
-document.querySelectorAll(".timeline-card").forEach(card => {
-    if(card.querySelector(".mobile-timeline-period")){
+function setupMobileExpertiseAccordion() {
+    if(!businessPage){
         return;
     }
 
-    const item = card.closest(".timeline-item");
-    const date = item?.querySelector(".timeline-date")?.textContent?.replace(/\s+/g, " ").trim();
+    const cards = Array.from(document.querySelectorAll("#expertise .expertise-card"));
 
-    if(date){
-        const period = document.createElement("p");
-        period.className = "mobile-timeline-period";
-        period.textContent = date;
-        card.insertBefore(period, card.firstChild);
-    }
-});
-
-const languageCard = document.querySelector(".global-card");
-const languageItems = languageCard ? languageCard.querySelectorAll("li") : [];
-
-function updateMobileLanguageLabels() {
-    languageItems.forEach(item => {
-        if(!item.dataset.fullLabel){
-            item.dataset.fullLabel = item.textContent.trim();
+    cards.forEach((card, index) => {
+        if(card.dataset.mobileExpertiseReady === "true"){
+            return;
         }
 
-        if(mobileMediaQuery.matches){
-            item.textContent = item.dataset.fullLabel
-                .replace(/（.*?）/g, "")
-                .replace(/\s+—\s+.*$/g, "")
-                .trim();
-        }else{
-            item.textContent = item.dataset.fullLabel;
+        const visual = card.querySelector(".expertise-visual");
+        const heading = card.querySelector("h3");
+        const panel = card.querySelector("p");
+
+        if(!visual || !heading || !panel){
+            return;
         }
+
+        card.dataset.mobileExpertiseReady = "true";
+        card.classList.add("mobile-expertise-accordion");
+
+        const trigger = document.createElement("button");
+        const panelId = `expertise-panel-${index + 1}`;
+        trigger.type = "button";
+        trigger.className = "expertise-accordion-trigger";
+        trigger.setAttribute("aria-expanded", "false");
+        trigger.setAttribute("aria-controls", panelId);
+
+        const indicator = document.createElement("span");
+        indicator.className = "expertise-accordion-indicator";
+        indicator.setAttribute("aria-hidden", "true");
+
+        card.insertBefore(trigger, visual);
+        trigger.appendChild(visual);
+        trigger.appendChild(heading);
+        trigger.appendChild(indicator);
+
+        panel.id = panelId;
+        panel.classList.add("expertise-accordion-panel");
+
+        trigger.addEventListener("click", () => {
+            const isOpen = card.classList.contains("is-open");
+
+            cards.forEach(otherCard => {
+                const otherTrigger = otherCard.querySelector(".expertise-accordion-trigger");
+                otherCard.classList.remove("is-open");
+
+                if(otherTrigger){
+                    otherTrigger.setAttribute("aria-expanded", "false");
+                }
+            });
+
+            if(!isOpen){
+                card.classList.add("is-open");
+                trigger.setAttribute("aria-expanded", "true");
+            }
+        });
     });
 }
 
-updateMobileLanguageLabels();
+function setupMobileBusinessSections() {
+    if(!mobileMediaQuery.matches){
+        return;
+    }
+
+    setupMobileCasesCarousel();
+    setupMobileExpertiseAccordion();
+}
+
+setupMobileBusinessSections();
 
 if(mobileMediaQuery.addEventListener){
-    mobileMediaQuery.addEventListener("change", updateMobileLanguageLabels);
+    mobileMediaQuery.addEventListener("change", setupMobileBusinessSections);
 }else if(mobileMediaQuery.addListener){
-    mobileMediaQuery.addListener(updateMobileLanguageLabels);
+    mobileMediaQuery.addListener(setupMobileBusinessSections);
 }
 
 document.querySelectorAll(".hero-hotspot-contact").forEach(link => {
@@ -351,7 +293,15 @@ function createMobileBottomNav() {
         return;
     }
 
-    const labels = isJapanesePage
+    const labels = isJapaneseBusinessPage
+        ? [
+            ["#value", "私について", "greeting"],
+            ["#cases", "実績", "experience"],
+            ["#expertise", "専門領域", "expertise"],
+            ["#beyond", "ミッション", "home"],
+            ["#contact", "連絡先", "contact"]
+        ]
+        : isJapanesePage
         ? [
             ["#", "ホーム", "home"],
             ["#about", "ご挨拶", "greeting"],
@@ -360,10 +310,10 @@ function createMobileBottomNav() {
             ["#contact", "連絡先", "contact"]
         ]
         : [
-            ["#", "Home", "home"],
-            ["#about", "Profile", "greeting"],
+            ["#value", "About", "greeting"],
+            ["#cases", "Cases", "experience"],
             ["#expertise", "Expertise", "expertise"],
-            ["#experience", "Experience", "experience"],
+            ["#beyond", "Mission", "home"],
             ["#contact", "Contact", "contact"]
         ];
 
@@ -386,7 +336,13 @@ function createMobileBottomNav() {
 createMobileBottomNav();
 
 const mobileBottomLinks = document.querySelectorAll(".mobile-bottom-nav a");
-const mobileObservedSections = document.querySelectorAll(".mobile-hero-image-section, .hero-approved, #about, #expertise, #experience, #contact");
+const mobileObservedSections = document.querySelectorAll(
+    isJapaneseBusinessPage
+        ? ".mobile-hero-image-section, .hero-approved, #value, #cases, #expertise, #beyond, #contact"
+        : isJapanesePage
+        ? ".mobile-hero-image-section, .hero-approved, #about, #expertise, #experience, #contact"
+        : ".mobile-hero-image-section, .hero-approved, #value, #cases, #expertise, #beyond, #contact"
+);
 
 function setActiveMobileLink(id) {
     mobileBottomLinks.forEach(link => {
@@ -407,7 +363,7 @@ const mobileNavObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if(entry.isIntersecting){
             const id = entry.target.id || "home";
-            setActiveMobileLink(id);
+            setActiveMobileLink((!isJapanesePage || isJapaneseBusinessPage) && id === "home" ? "value" : id);
         }
     });
 }, {
@@ -419,4 +375,4 @@ mobileObservedSections.forEach(section => {
     mobileNavObserver.observe(section);
 });
 
-setActiveMobileLink("home");
+setActiveMobileLink(isJapaneseBusinessPage ? "value" : isJapanesePage ? "home" : "value");
